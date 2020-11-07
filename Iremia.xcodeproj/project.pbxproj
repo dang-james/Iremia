@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		72F0FBCF2556229B007D49DE /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F0FBCE2556229B007D49DE /* SettingsViewController.swift */; };
+		72F0FBDA25562C7B007D49DE /* EntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F0FBD925562C7B007D49DE /* EntryViewController.swift */; };
+		72F0FBDF25562C97007D49DE /* TaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F0FBDE25562C97007D49DE /* TaskViewController.swift */; };
 		F1D2FF7B2554CDCB0075E8C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D2FF7A2554CDCB0075E8C4 /* AppDelegate.swift */; };
 		F1D2FF7D2554CDCB0075E8C4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D2FF7C2554CDCB0075E8C4 /* SceneDelegate.swift */; };
 		F1D2FF7F2554CDCB0075E8C4 /* ChecklistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D2FF7E2554CDCB0075E8C4 /* ChecklistViewController.swift */; };
@@ -38,6 +40,8 @@
 
 /* Begin PBXFileReference section */
 		72F0FBCE2556229B007D49DE /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		72F0FBD925562C7B007D49DE /* EntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryViewController.swift; sourceTree = "<group>"; };
+		72F0FBDE25562C97007D49DE /* TaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewController.swift; sourceTree = "<group>"; };
 		F1D2FF772554CDCB0075E8C4 /* Iremia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Iremia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1D2FF7A2554CDCB0075E8C4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F1D2FF7C2554CDCB0075E8C4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -104,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				F1D2FF7A2554CDCB0075E8C4 /* AppDelegate.swift */,
+				72F0FBDE25562C97007D49DE /* TaskViewController.swift */,
 				F1D2FF7C2554CDCB0075E8C4 /* SceneDelegate.swift */,
 				72F0FBCE2556229B007D49DE /* SettingsViewController.swift */,
 				F1D2FF7E2554CDCB0075E8C4 /* ChecklistViewController.swift */,
@@ -112,6 +117,7 @@
 				F1D2FF852554CDCD0075E8C4 /* Assets.xcassets */,
 				F1D2FF872554CDCD0075E8C4 /* LaunchScreen.storyboard */,
 				F1D2FF8A2554CDCD0075E8C4 /* Info.plist */,
+				72F0FBD925562C7B007D49DE /* EntryViewController.swift */,
 			);
 			path = Iremia;
 			sourceTree = "<group>";
@@ -266,10 +272,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				F1D2FF812554CDCB0075E8C4 /* WellnessViewController.swift in Sources */,
+				72F0FBDF25562C97007D49DE /* TaskViewController.swift in Sources */,
 				F1D2FF7F2554CDCB0075E8C4 /* ChecklistViewController.swift in Sources */,
 				72F0FBCF2556229B007D49DE /* SettingsViewController.swift in Sources */,
 				F1D2FF7B2554CDCB0075E8C4 /* AppDelegate.swift in Sources */,
 				F1D2FF7D2554CDCB0075E8C4 /* SceneDelegate.swift in Sources */,
+				72F0FBDA25562C7B007D49DE /* EntryViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
