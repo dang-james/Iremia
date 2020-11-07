@@ -7,10 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		72F0FBCF2556229B007D49DE /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F0FBCE2556229B007D49DE /* SettingsViewController.swift */; };
 		F1D2FF7B2554CDCB0075E8C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D2FF7A2554CDCB0075E8C4 /* AppDelegate.swift */; };
 		F1D2FF7D2554CDCB0075E8C4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D2FF7C2554CDCB0075E8C4 /* SceneDelegate.swift */; };
-		F1D2FF7F2554CDCB0075E8C4 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D2FF7E2554CDCB0075E8C4 /* FirstViewController.swift */; };
-		F1D2FF812554CDCB0075E8C4 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D2FF802554CDCB0075E8C4 /* SecondViewController.swift */; };
+		F1D2FF7F2554CDCB0075E8C4 /* ChecklistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D2FF7E2554CDCB0075E8C4 /* ChecklistViewController.swift */; };
+		F1D2FF812554CDCB0075E8C4 /* WellnessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D2FF802554CDCB0075E8C4 /* WellnessViewController.swift */; };
 		F1D2FF842554CDCB0075E8C4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1D2FF822554CDCB0075E8C4 /* Main.storyboard */; };
 		F1D2FF862554CDCD0075E8C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1D2FF852554CDCD0075E8C4 /* Assets.xcassets */; };
 		F1D2FF892554CDCD0075E8C4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1D2FF872554CDCD0075E8C4 /* LaunchScreen.storyboard */; };
@@ -36,11 +37,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		72F0FBCE2556229B007D49DE /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		F1D2FF772554CDCB0075E8C4 /* Iremia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Iremia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1D2FF7A2554CDCB0075E8C4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F1D2FF7C2554CDCB0075E8C4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F1D2FF7E2554CDCB0075E8C4 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		F1D2FF802554CDCB0075E8C4 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		F1D2FF7E2554CDCB0075E8C4 /* ChecklistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChecklistViewController.swift; sourceTree = "<group>"; };
+		F1D2FF802554CDCB0075E8C4 /* WellnessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WellnessViewController.swift; sourceTree = "<group>"; };
 		F1D2FF832554CDCB0075E8C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F1D2FF852554CDCD0075E8C4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F1D2FF882554CDCD0075E8C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -103,8 +105,9 @@
 			children = (
 				F1D2FF7A2554CDCB0075E8C4 /* AppDelegate.swift */,
 				F1D2FF7C2554CDCB0075E8C4 /* SceneDelegate.swift */,
-				F1D2FF7E2554CDCB0075E8C4 /* FirstViewController.swift */,
-				F1D2FF802554CDCB0075E8C4 /* SecondViewController.swift */,
+				72F0FBCE2556229B007D49DE /* SettingsViewController.swift */,
+				F1D2FF7E2554CDCB0075E8C4 /* ChecklistViewController.swift */,
+				F1D2FF802554CDCB0075E8C4 /* WellnessViewController.swift */,
 				F1D2FF822554CDCB0075E8C4 /* Main.storyboard */,
 				F1D2FF852554CDCD0075E8C4 /* Assets.xcassets */,
 				F1D2FF872554CDCD0075E8C4 /* LaunchScreen.storyboard */,
@@ -262,8 +265,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F1D2FF812554CDCB0075E8C4 /* SecondViewController.swift in Sources */,
-				F1D2FF7F2554CDCB0075E8C4 /* FirstViewController.swift in Sources */,
+				F1D2FF812554CDCB0075E8C4 /* WellnessViewController.swift in Sources */,
+				F1D2FF7F2554CDCB0075E8C4 /* ChecklistViewController.swift in Sources */,
+				72F0FBCF2556229B007D49DE /* SettingsViewController.swift in Sources */,
 				F1D2FF7B2554CDCB0075E8C4 /* AppDelegate.swift in Sources */,
 				F1D2FF7D2554CDCB0075E8C4 /* SceneDelegate.swift in Sources */,
 			);

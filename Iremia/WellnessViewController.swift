@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SecondViewController: UIViewController {
+class WellnessViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
