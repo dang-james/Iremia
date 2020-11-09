@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		725472862559201A00954D10 /* TaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 725472852559201A00954D10 /* TaskViewController.swift */; };
 		72C6CC672557569900207526 /* ChecklistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C6CC662557569900207526 /* ChecklistViewController.swift */; };
 		72C6CC6C25575A6000207526 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C6CC6B25575A6000207526 /* AddViewController.swift */; };
 		72F0FBCF2556229B007D49DE /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F0FBCE2556229B007D49DE /* SettingsViewController.swift */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		725472852559201A00954D10 /* TaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewController.swift; sourceTree = "<group>"; };
 		72C6CC662557569900207526 /* ChecklistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChecklistViewController.swift; sourceTree = "<group>"; };
 		72C6CC6B25575A6000207526 /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
 		72F0FBCE2556229B007D49DE /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 				72F0FBCE2556229B007D49DE /* SettingsViewController.swift */,
 				72C6CC6B25575A6000207526 /* AddViewController.swift */,
 				72C6CC662557569900207526 /* ChecklistViewController.swift */,
+				725472852559201A00954D10 /* TaskViewController.swift */,
 				F1D2FF802554CDCB0075E8C4 /* WellnessViewController.swift */,
 				F1D2FF822554CDCB0075E8C4 /* Main.storyboard */,
 				F1D2FF852554CDCD0075E8C4 /* Assets.xcassets */,
@@ -269,6 +272,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F1D2FF812554CDCB0075E8C4 /* WellnessViewController.swift in Sources */,
+				725472862559201A00954D10 /* TaskViewController.swift in Sources */,
 				72F0FBCF2556229B007D49DE /* SettingsViewController.swift in Sources */,
 				72C6CC6C25575A6000207526 /* AddViewController.swift in Sources */,
 				F1D2FF7B2554CDCB0075E8C4 /* AppDelegate.swift in Sources */,

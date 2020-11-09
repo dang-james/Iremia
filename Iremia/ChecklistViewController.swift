@@ -33,7 +33,7 @@ class ChecklistViewController: UIViewController {
         vc.completion = {title, body, date in
             DispatchQueue.main.async {
                 self.navigationController?.popToRootViewController(animated: true)
-                let new = MyReminder(title: title, date: date, identifier: "id\(title)")
+                let new = MyReminder(title: title, date: date, body:body, identifier: "id\(title)")
                 self.models.append(new)
                 self.table.reloadData()
                 
@@ -65,6 +65,18 @@ class ChecklistViewController: UIViewController {
 extension ChecklistViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        
+        let item = models[indexPath.row]
+        
+        guard let vc = storyboard?.instantiateViewController(identifier: "task") as? TaskViewController else {
+            return
+        }
+        
+        vc.item = item
+               
+        vc.navigationItem.largeTitleDisplayMode = .never
+        vc.title = item.title
+        navigationController?.pushViewController(vc, animated: true)
     }
 }
 
@@ -88,11 +100,28 @@ extension ChecklistViewController: UITableViewDataSource {
         cell.detailTextLabel?.text = formatter.string(from: date)
         return cell
     }
+    
+    
+    //used for deletion, may need to change when db implemented
+    func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
+        return .delete
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete{
+            tableView.beginUpdates()            
+            models.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+            
+            tableView.endUpdates()
+        }
+    }
 }
 
 struct MyReminder {
     let title: String
     let date: Date
+    let body: String
     let identifier: String
     
 }
