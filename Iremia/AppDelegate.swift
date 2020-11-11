@@ -9,7 +9,7 @@ import UserNotifications
 import UIKit
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
@@ -32,15 +32,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     //hi
     
-    func registerForPushNotifications() {
-      //1
-      UNUserNotificationCenter.current()
-        //2
-        .requestAuthorization(options: [.alert, .sound, .badge]) { granted, _ in
-          //3
-          print("Permission granted: \(granted)")
+    func registerForRemoteNotification() {
+            if #available(iOS 10.0, *) {
+                let center  = UNUserNotificationCenter.current()
+
+                center.requestAuthorization(options: [.sound, .alert, .badge]) { (granted, error) in
+                    if error == nil{
+                        UIApplication.shared.registerForRemoteNotifications()
+                    }
+                }
+
+            }
+            else {
+                UIApplication.shared.registerUserNotificationSettings(UIUserNotificationSettings(types: [.sound, .alert, .badge], categories: nil))
+                UIApplication.shared.registerForRemoteNotifications()
+            }
         }
-    }
 
 }
 
