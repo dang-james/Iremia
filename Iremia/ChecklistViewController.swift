@@ -16,6 +16,11 @@ class ChecklistViewController: UIViewController {
     var models = [MyReminder]()
     
     override func viewDidLoad() {
+        
+        let center = UNUserNotificationCenter.current()
+        center.requestAuthorization(options: [.alert, .sound]) { (granted, error) in
+            
+        }
         super.viewDidLoad()
         table.delegate = self
         table.dataSource = self

@@ -27,7 +27,7 @@ class AddViewController: UIViewController, UITextFieldDelegate {
     
     @objc func didTapSave() {
         if let titleText = titleField.text, !titleText.isEmpty,
-           let bodyText = bodyField.text, !bodyText.isEmpty {
+           let bodyText = bodyField.text{
             
             let targetDate = datePicker.date
             
