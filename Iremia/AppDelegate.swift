@@ -30,6 +30,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
     //hi
+    
+    func registerForPushNotifications() {
+      //1
+      UNUserNotificationCenter.current()
+        //2
+        .requestAuthorization(options: [.alert, .sound, .badge]) { granted, _ in
+          //3
+          print("Permission granted: \(granted)")
+        }
+    }
 
 }
 
