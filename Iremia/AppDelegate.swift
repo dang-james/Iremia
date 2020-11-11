@@ -5,6 +5,7 @@
 //  Copyright © 2020 Iremia. All rights reserved.
 //
 
+import UserNotifications
 import UIKit
 
 @UIApplicationMain
