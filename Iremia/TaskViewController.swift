@@ -19,6 +19,7 @@ class TaskViewController: UIViewController {
     static let dateFormatter: DateFormatter = {
         let dateFormatter = DateFormatter()
         dateFormatter.dateStyle = .medium
+        dateFormatter.dateFormat = "MMM, dd, YYYY, hh:mm a"
         return dateFormatter
     }()
 

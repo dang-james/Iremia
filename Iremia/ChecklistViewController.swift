@@ -19,6 +19,7 @@ class ChecklistViewController: UIViewController {
         super.viewDidLoad()
         table.delegate = self
         table.dataSource = self
+        
 
         // Do any additional setup after loading the view.
     }
@@ -95,7 +96,7 @@ extension ChecklistViewController: UITableViewDataSource {
         let date = models[indexPath.row].date
         
         let formatter = DateFormatter()
-        formatter.dateFormat = "MMM, dd, YYYY"
+        formatter.dateFormat = "MMM, dd, YYYY, hh:mm a"
         
         cell.detailTextLabel?.text = formatter.string(from: date)
         return cell
