@@ -6,14 +6,25 @@
 //  Copyright © 2020 Iremia. All rights reserved.
 //
 
+import RealmSwift
 import UserNotifications
 import UIKit
+
+//create task class for database
+class Task: Object {
+    @objc dynamic var title: String = ""
+    @objc dynamic var body: String = ""
+    @objc dynamic var date: Date = Date()
+}
 
 class ChecklistViewController: UIViewController {
     
     @IBOutlet var table: UITableView!
     
-    var models = [MyReminder]()
+    //initialize realm
+    private let realm = try! Realm()
+    //this array stores all the tasks on the database
+    var taskList = [Task]()
     
     override func viewDidLoad() {
         //Ask for notifications permissions
@@ -21,6 +32,9 @@ class ChecklistViewController: UIViewController {
         center.requestAuthorization(options: [.alert, .sound]) { (granted, error) in
         }
         super.viewDidLoad()
+        //populates taskList array with tasks from database
+        taskList = realm.objects(Task.self).map({ $0 })
+        table.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         table.delegate = self
         table.dataSource = self
         
@@ -37,13 +51,14 @@ class ChecklistViewController: UIViewController {
         vc.title = "New Task"
         vc.navigationItem.largeTitleDisplayMode = .never
         
-        //When add task is done, creates a new MyReminder object with entered values, and creates notification
+        //When add task is done, creates notification with inputted data
         vc.completion = {title, body, date in
             DispatchQueue.main.async {
                 //Creating MyReminder object
                 self.navigationController?.popToRootViewController(animated: true)
-                let new = MyReminder(title: title, date: date, body:body, identifier: "id\(title)")
-                self.models.append(new)
+                
+                //refreshes the local array and table with updated database tasks
+                self.taskList = self.realm.objects(Task.self).map({ $0 })
                 self.table.reloadData()
                 
                 // Creating notification
@@ -64,14 +79,17 @@ class ChecklistViewController: UIViewController {
                                     }
                                 })
             }
+            
         }
         
         // Pushes Add page on top
         navigationController?.pushViewController(vc, animated: true)
     }
-    
-         
-
+    //refresh table and local taskList array
+    func refresh() {
+        self.taskList = self.realm.objects(Task.self).map({ $0 })
+        self.table.reloadData()
+    }
 }
 
 extension ChecklistViewController: UITableViewDelegate {
@@ -79,15 +97,18 @@ extension ChecklistViewController: UITableViewDelegate {
         tableView.deselectRow(at: indexPath, animated: true)
         
         //Sets up table on checklist page
-        
-        let item = models[indexPath.row]
+        let item = taskList[indexPath.row]
         
         guard let vc = storyboard?.instantiateViewController(identifier: "task") as? TaskViewController else {
             return
         }
         
         vc.item = item
-               
+        //if item gets deleted table refeshes
+        vc.deletionHandler = { [weak self] in
+            self?.refresh()
+        }
+        
         vc.navigationItem.largeTitleDisplayMode = .never
         vc.title = item.title
         navigationController?.pushViewController(vc, animated: true)
@@ -101,45 +122,19 @@ extension ChecklistViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return models.count
+        return taskList.count
     }
     
     // Function tells each table cell what to display
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = models[indexPath.row].title
-        let date = models[indexPath.row].date
+        cell.textLabel?.text = taskList[indexPath.row].title
+        //let date = taskList[indexPath.row].date
         
         let formatter = DateFormatter()
         formatter.dateFormat = "MMM, dd, YYYY, hh:mm a"
         
-        cell.detailTextLabel?.text = formatter.string(from: date)
+        cell.detailTextLabel?.text = formatter.string(from: taskList[indexPath.row].date)
         return cell
     }
-    
-    
-    //used for deletion, may need to change when db implemented
-    func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
-        return .delete
-    }
-    
-    // Deletes task from array and table and updates table
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete{
-            tableView.beginUpdates()            
-            models.remove(at: indexPath.row)
-            tableView.deleteRows(at: [indexPath], with: .fade)
-            
-            tableView.endUpdates()
-        }
-    }
-}
-
-// Struct for reminders
-struct MyReminder {
-    let title: String
-    let date: Date
-    let body: String
-    let identifier: String
-    
 }
