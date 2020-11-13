@@ -53,7 +53,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="2wq-iK-x2J"/>
-                        <color key="backgroundColor" systemColor="systemGray3Color"/>
+                        <color key="backgroundColor" red="0.94825392959999999" green="1" blue="0.97651797529999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
                     <navigationItem key="navigationItem" title="Settings" id="wzB-Rs-Owg"/>
                 </viewController>
@@ -95,7 +95,7 @@
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="bFj-PA-ioy"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.94825392959999999" green="1" blue="0.97651797529999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="bFj-PA-ioy" firstAttribute="trailing" secondItem="Lms-lQ-aBU" secondAttribute="trailing" constant="20" id="3J4-vW-zKa"/>
                             <constraint firstItem="Lms-lQ-aBU" firstAttribute="top" secondItem="bFj-PA-ioy" secondAttribute="top" constant="20" id="46U-HE-xl7"/>
@@ -128,6 +128,7 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7Sa-pT-wbR">
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="sectionIndexBackgroundColor" red="0.59333753590000005" green="0.75813680890000001" blue="0.64337778089999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" textLabel="2eI-D9-0Bu" detailTextLabel="D3I-Ac-Aho" style="IBUITableViewCellStyleSubtitle" id="6Bq-WC-Mbt">
                                         <rect key="frame" x="0.0" y="28" width="414" height="55.5"/>
@@ -152,6 +153,8 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.92256853354674062" green="0.99780544607368693" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="tintColor" red="0.59333753590000005" green="0.75813680890000001" blue="0.64337778089999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -210,7 +213,7 @@
                             </datePicker>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="fFt-hC-HjZ"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.94825392959999999" green="1" blue="0.97651797529999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="o6a-aE-evB" firstAttribute="top" secondItem="fFt-hC-HjZ" secondAttribute="top" constant="10" id="1zq-Pp-LGt"/>
                             <constraint firstItem="o6a-aE-evB" firstAttribute="leading" secondItem="fFt-hC-HjZ" secondAttribute="leading" constant="10" id="EPE-9H-5Ud"/>
@@ -256,7 +259,7 @@
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="jXe-Z1-1ud"/>
-                        <color key="backgroundColor" systemColor="systemBlueColor"/>
+                        <color key="backgroundColor" red="0.59333753590000005" green="0.75813680890000001" blue="0.64337778089999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="MfQ-UJ-ScW" firstAttribute="leading" secondItem="jXe-Z1-1ud" secondAttribute="leading" id="EDv-9h-rvc"/>
                             <constraint firstItem="jXe-Z1-1ud" firstAttribute="bottom" secondItem="MfQ-UJ-ScW" secondAttribute="bottom" id="cdK-lu-abp"/>
@@ -294,7 +297,7 @@
         <scene sceneID="3Vr-pf-tU3">
             <objects>
                 <navigationController id="xB5-m4-9R3" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Settings" selectedImage="square.and.arrow.up.fill" catalog="system" id="lH5-Df-xie"/>
+                    <tabBarItem key="tabBarItem" title="Settings" selectedImage="gearshape.fill" catalog="system" id="lH5-Df-xie"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="7LB-71-Udj">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -326,17 +329,11 @@
         </scene>
     </scenes>
     <resources>
+        <image name="gearshape.fill" catalog="system" width="128" height="121"/>
         <image name="heart.fill" catalog="system" width="128" height="109"/>
         <image name="pencil" catalog="system" width="128" height="113"/>
-        <image name="square.and.arrow.up.fill" catalog="system" width="115" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemBlueColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemGray3Color">
-            <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
