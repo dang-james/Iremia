@@ -10,12 +10,15 @@ import UIKit
 
 class TaskViewController: UIViewController {
     
+    //Create Reminder object
     public var item: MyReminder?    
     
+    //Create labels for title, body, and date fields
     @IBOutlet var titleLabel: UILabel!
     @IBOutlet var bodyLabel: UILabel!
     @IBOutlet var dateLabel: UILabel!
     
+    //Set format for displaying date
     static let dateFormatter: DateFormatter = {
         let dateFormatter = DateFormatter()
         dateFormatter.dateStyle = .medium
@@ -25,7 +28,8 @@ class TaskViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        //Gets the values for each field from the item object
         titleLabel.text = item?.title
         bodyLabel.text = item?.body
         dateLabel.text = Self.dateFormatter.string(from: item!.date)
@@ -35,15 +39,5 @@ class TaskViewController: UIViewController {
     }
     
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

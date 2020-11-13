@@ -16,33 +16,37 @@ class ChecklistViewController: UIViewController {
     var models = [MyReminder]()
     
     override func viewDidLoad() {
-        
+        //Ask for notifications permissions
         let center = UNUserNotificationCenter.current()
         center.requestAuthorization(options: [.alert, .sound]) { (granted, error) in
-            
         }
         super.viewDidLoad()
         table.delegate = self
         table.dataSource = self
         
-
-        // Do any additional setup after loading the view.
     }
     
+    //Function called when users tap the add button
     @IBAction func didTapAdd(){
+        
+        //Navigates to the add task page
         guard let vc = storyboard?.instantiateViewController(identifier: "add") as? AddViewController else {
             return
         }
-        
+        //Set title for add task page
         vc.title = "New Task"
         vc.navigationItem.largeTitleDisplayMode = .never
+        
+        //When add task is done, creates a new MyReminder object with entered values, and creates notification
         vc.completion = {title, body, date in
             DispatchQueue.main.async {
+                //Creating MyReminder object
                 self.navigationController?.popToRootViewController(animated: true)
                 let new = MyReminder(title: title, date: date, body:body, identifier: "id\(title)")
                 self.models.append(new)
                 self.table.reloadData()
                 
+                // Creating notification
                 let content = UNMutableNotificationContent()
                 content.title = title
                 content.sound = .default
@@ -61,6 +65,8 @@ class ChecklistViewController: UIViewController {
                                 })
             }
         }
+        
+        // Pushes Add page on top
         navigationController?.pushViewController(vc, animated: true)
     }
     
@@ -71,6 +77,8 @@ class ChecklistViewController: UIViewController {
 extension ChecklistViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        
+        //Sets up table on checklist page
         
         let item = models[indexPath.row]
         
@@ -87,6 +95,7 @@ extension ChecklistViewController: UITableViewDelegate {
 }
 
 extension ChecklistViewController: UITableViewDataSource {
+    //More table set up
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -95,6 +104,7 @@ extension ChecklistViewController: UITableViewDataSource {
         return models.count
     }
     
+    // Function tells each table cell what to display
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         cell.textLabel?.text = models[indexPath.row].title
@@ -113,6 +123,7 @@ extension ChecklistViewController: UITableViewDataSource {
         return .delete
     }
     
+    // Deletes task from array and table and updates table
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete{
             tableView.beginUpdates()            
@@ -124,6 +135,7 @@ extension ChecklistViewController: UITableViewDataSource {
     }
 }
 
+// Struct for reminders
 struct MyReminder {
     let title: String
     let date: Date
