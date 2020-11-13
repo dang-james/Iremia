@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		716CA6F6255E17EB0095144E /* ExerciseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716CA6F5255E17EB0095144E /* ExerciseViewController.swift */; };
 		725472862559201A00954D10 /* TaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 725472852559201A00954D10 /* TaskViewController.swift */; };
 		72C6CC672557569900207526 /* ChecklistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C6CC662557569900207526 /* ChecklistViewController.swift */; };
 		72C6CC6C25575A6000207526 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C6CC6B25575A6000207526 /* AddViewController.swift */; };
@@ -39,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		716CA6F5255E17EB0095144E /* ExerciseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseViewController.swift; sourceTree = "<group>"; };
 		725472852559201A00954D10 /* TaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewController.swift; sourceTree = "<group>"; };
 		72C6CC662557569900207526 /* ChecklistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChecklistViewController.swift; sourceTree = "<group>"; };
 		72C6CC6B25575A6000207526 /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 				F1D2FF852554CDCD0075E8C4 /* Assets.xcassets */,
 				F1D2FF872554CDCD0075E8C4 /* LaunchScreen.storyboard */,
 				F1D2FF8A2554CDCD0075E8C4 /* Info.plist */,
+				716CA6F5255E17EB0095144E /* ExerciseViewController.swift */,
 			);
 			path = Iremia;
 			sourceTree = "<group>";
@@ -277,6 +280,7 @@
 				72C6CC6C25575A6000207526 /* AddViewController.swift in Sources */,
 				F1D2FF7B2554CDCB0075E8C4 /* AppDelegate.swift in Sources */,
 				72C6CC672557569900207526 /* ChecklistViewController.swift in Sources */,
+				716CA6F6255E17EB0095144E /* ExerciseViewController.swift in Sources */,
 				F1D2FF7D2554CDCB0075E8C4 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

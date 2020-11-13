@@ -116,7 +116,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ybo-Cs-aRF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1472" y="2030"/>
+            <point key="canvasLocation" x="-2107" y="1531"/>
         </scene>
         <!--Tasks-->
         <scene sceneID="Q9m-c2-CRD">
@@ -231,23 +231,40 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xrb-TM-YIk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-768" y="2030"/>
+            <point key="canvasLocation" x="-1422" y="1532"/>
         </scene>
         <!--Wellness-->
         <scene sceneID="7Df-iN-3L6">
             <objects>
-                <viewController id="BoM-qR-YYM" sceneMemberID="viewController">
+                <viewController id="BoM-qR-YYM" customClass="WellnessViewController" customModule="Iremia" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fmZ-xj-PCu">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dji-j9-lGh">
+                                <rect key="frame" x="-12" y="225" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Title" id="6j5-0t-8dT">
+                                        <barButtonItem key="rightBarButtonItem" title="Exercise" width="437.5" id="hPc-xu-RXa">
+                                            <connections>
+                                                <action selector="didTapExercise" destination="BoM-qR-YYM" id="Ije-t1-G9I"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="jXe-Z1-1ud"/>
-                        <color key="backgroundColor" systemColor="systemBlueColor"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <toolbarItems/>
                     <navigationItem key="navigationItem" title="Wellness" id="5Vo-rc-7QZ"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TLi-Ag-7nt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="22" y="1359"/>
+            <point key="canvasLocation" x="21.739130434782609" y="1358.7053571428571"/>
         </scene>
         <!--Settings-->
         <scene sceneID="3Vr-pf-tU3">
@@ -283,6 +300,21 @@
             </objects>
             <point key="canvasLocation" x="23" y="715"/>
         </scene>
+        <!--Exercise View Controller-->
+        <scene sceneID="24Z-5V-LJN">
+            <objects>
+                <viewController storyboardIdentifier="ExerciseViewController" id="MlJ-z1-8NF" customClass="ExerciseViewController" customModule="Iremia" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="g98-tG-oSW">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="4oA-cw-lPl"/>
+                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1fn-bF-Fep" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-661" y="2105"/>
+        </scene>
     </scenes>
     <resources>
         <image name="heart.fill" catalog="system" width="128" height="109"/>
@@ -291,11 +323,11 @@
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
-        <systemColor name="systemBlueColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
         <systemColor name="systemGray3Color">
             <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
