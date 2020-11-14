@@ -20,34 +20,39 @@ class WellnessViewController: UIViewController {
         guard let vc = storyboard?.instantiateViewController(identifier: "ExerciseViewController") as? ExerciseViewController else {
             return
         }
-        //Set title for add task page
+        //Set title for exercise wellness page
         vc.title = "Exercise"
         
-        //When add task is done, creates a new MyReminder object with entered values, and creates notification
+        //When exercise repeat reminder is done and creates notification
         vc.completion = {body, date in
             DispatchQueue.main.async {
-                //Creating MyReminder object
-                self.navigationController?.popToRootViewController(animated: true)
-                let new = MyReminder(date: date, body:body)
-                self.models.append(new)
-                //self.table.reloadData()
-                
                 // Creating notification
                 let content = UNMutableNotificationContent()
                 content.sound = .default
                 content.body = body
                 
                 let targetDate = date
-                                let trigger = UNCalendarNotificationTrigger(dateMatching: Calendar.current.dateComponents([.year, .month, .day, .hour, .minute, .second],
-                                                                                                                          from: targetDate),
-                                                                            repeats: false)
+                let trigger = UNCalendarNotificationTrigger(dateMatching: Calendar.current.dateComponents([.year, .month, .day, .hour, .minute, .second], from: targetDate), repeats: true)
 
-                                let request = UNNotificationRequest(identifier: "some_long_id", content: content, trigger: trigger)
-                                UNUserNotificationCenter.current().add(request, withCompletionHandler: { error in
-                                    if error != nil {
-                                        print("something went wrong")
-                                    }
-                                })
+                //*******************************
+                //@jeff  store the exercise reminder description and date at this point
+                //i believe values are on line 32 and 34
+                //to re-populate fields next time user edits exercise wellness repeat notification
+                //*******************************
+                
+                
+                let notif_id = "exercise_id"
+                //delete old notification repeater
+                UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: [notif_id])
+                
+                //create new notifcation repeater
+                let request = UNNotificationRequest(identifier: notif_id, content: content, trigger: trigger)
+                
+                UNUserNotificationCenter.current().add(request, withCompletionHandler: { error in
+                    if error != nil {
+                        print("something went wrong")
+                    }
+                })
             }
         }
         

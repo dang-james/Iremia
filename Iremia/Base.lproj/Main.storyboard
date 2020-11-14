@@ -362,19 +362,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lOc-Hy-FHu">
-                                <rect key="frame" x="131" y="285" width="97" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lOc-Hy-FHu">
+                                <rect key="frame" x="10" y="144" width="394" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="Ub1-0I-8VZ">
-                                <rect key="frame" x="0.0" y="428" width="414" height="162"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <datePicker contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="Ub1-0I-8VZ">
+                                <rect key="frame" x="0.0" y="428" width="414" height="216"/>
                             </datePicker>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="4oA-cw-lPl"/>
                         <color key="backgroundColor" systemColor="systemGreenColor"/>
+                        <constraints>
+                            <constraint firstItem="4oA-cw-lPl" firstAttribute="trailing" secondItem="lOc-Hy-FHu" secondAttribute="trailing" constant="10" id="IZm-A4-tzh"/>
+                            <constraint firstItem="4oA-cw-lPl" firstAttribute="trailing" secondItem="lOc-Hy-FHu" secondAttribute="trailing" constant="10" id="ROG-5I-ejJ"/>
+                            <constraint firstItem="Ub1-0I-8VZ" firstAttribute="top" secondItem="lOc-Hy-FHu" secondAttribute="bottom" constant="250" id="Xr4-Fh-hWN"/>
+                            <constraint firstItem="lOc-Hy-FHu" firstAttribute="top" secondItem="4oA-cw-lPl" secondAttribute="top" constant="20" id="laQ-BX-Nw9"/>
+                            <constraint firstItem="lOc-Hy-FHu" firstAttribute="leading" secondItem="4oA-cw-lPl" secondAttribute="leading" constant="10" id="tKm-G5-BzC"/>
+                            <constraint firstItem="lOc-Hy-FHu" firstAttribute="top" secondItem="4oA-cw-lPl" secondAttribute="top" constant="100" id="xAx-Bc-m8K"/>
+                            <constraint firstItem="lOc-Hy-FHu" firstAttribute="leading" secondItem="4oA-cw-lPl" secondAttribute="leading" constant="10" id="y6c-dy-TEc"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="bodyField" destination="lOc-Hy-FHu" id="Xea-NQ-bXs"/>

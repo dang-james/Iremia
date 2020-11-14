@@ -40,8 +40,10 @@ class ChecklistViewController: UIViewController {
         //When add task is done, creates a new MyReminder object with entered values, and creates notification
         vc.completion = {title, body, date in
             DispatchQueue.main.async {
-                //Creating MyReminder object
+                //return to previous page
                 self.navigationController?.popToRootViewController(animated: true)
+                
+                //Creating MyReminder object
                 let new = MyReminder(title: title, date: date, body:body, identifier: "id\(title)")
                 self.models.append(new)
                 self.table.reloadData()
@@ -53,16 +55,14 @@ class ChecklistViewController: UIViewController {
                 content.body = body
                 
                 let targetDate = date
-                                let trigger = UNCalendarNotificationTrigger(dateMatching: Calendar.current.dateComponents([.year, .month, .day, .hour, .minute, .second],
-                                                                                                                          from: targetDate),
-                                                                            repeats: false)
+                let trigger = UNCalendarNotificationTrigger(dateMatching: Calendar.current.dateComponents([.year, .month, .day, .hour, .minute, .second],from: targetDate), repeats: false)
 
-                                let request = UNNotificationRequest(identifier: "some_long_id", content: content, trigger: trigger)
-                                UNUserNotificationCenter.current().add(request, withCompletionHandler: { error in
-                                    if error != nil {
-                                        print("something went wrong")
-                                    }
-                                })
+                let request = UNNotificationRequest(identifier: "some_long_id", content: content, trigger: trigger)
+                UNUserNotificationCenter.current().add(request, withCompletionHandler: { error in
+                    if error != nil {
+                        print("something went wrong")
+                    }
+                })
             }
         }
         

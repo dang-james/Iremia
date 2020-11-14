@@ -21,17 +21,28 @@ class ExerciseViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         bodyField.delegate = self
+        
+        //**********
+        //@jeff I think the pre-populated description and date code will go here
+        bodyField.text = "database words here!!!"
+        //datepicker.date = idk how to make the date preset
+        //**********
+        
+        
+        
         //Creates save button on top right
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Save", style: .done, target: self, action: #selector(didTapSave))
     }
     
     @objc func didTapSave() {
-        //As long as title text is not empty, this saves the values users enter into corresponding variable
+        //return to previous page
+        self.navigationController?.popToRootViewController(animated: true)
+        
+        //this saves the values users enter into corresponding variable
         if let bodyText = bodyField.text{
-            
             let targetDate = datePicker.date
-            
-            //Calls completion function with values, which saves each value in a new object in array on ChecklistViewController
+
+            //Calls completion function with values
             completion?(bodyText,targetDate)
         }
     }
