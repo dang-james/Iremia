@@ -241,22 +241,76 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dji-j9-lGh">
-                                <rect key="frame" x="-12" y="225" width="414" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <items>
-                                    <navigationItem title="Title" id="6j5-0t-8dT">
-                                        <barButtonItem key="rightBarButtonItem" title="Exercise" width="437.5" id="hPc-xu-RXa">
-                                            <connections>
-                                                <action selector="didTapExercise" destination="BoM-qR-YYM" id="Ije-t1-G9I"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="UIButton" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6qn-qr-HRK">
+                                <rect key="frame" x="50" y="160" width="150" height="150"/>
+                                <color key="backgroundColor" red="0.20626899379999999" green="0.67410136009999999" blue="0.43896467020000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="4mK-qs-aWb"/>
+                                    <constraint firstAttribute="height" constant="150" id="ADU-JT-rGh"/>
+                                    <constraint firstAttribute="width" constant="150" id="C22-BU-NSe"/>
+                                </constraints>
+                                <state key="normal" title="Exercise">
+                                    <color key="titleColor" systemColor="systemBackgroundColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="didTapExercise:" destination="BoM-qR-YYM" eventType="primaryActionTriggered" id="698-t3-nPM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vka-xg-vE4">
+                                <rect key="frame" x="238" y="160" width="150" height="150"/>
+                                <color key="backgroundColor" red="0.20626899379999999" green="0.67410136009999999" blue="0.43896467020000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="Ala-dE-CHa"/>
+                                    <constraint firstAttribute="height" constant="150" id="Np9-eA-Iwj"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="150" id="kOk-Fe-h2O"/>
+                                    <constraint firstAttribute="width" constant="150" id="osb-hv-TGg"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="150" id="v8P-04-Eg6"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="150" id="vaW-jS-c2a"/>
+                                </constraints>
+                                <state key="normal" title="Sleep">
+                                    <color key="titleColor" systemColor="systemBackgroundColor"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O15-SN-oez">
+                                <rect key="frame" x="68" y="397" width="132" height="148"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.20626899379999999" green="0.67410136009999999" blue="0.43896467020000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Meals">
+                                    <color key="titleColor" systemColor="systemBackgroundColor"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9vO-G4-bkL">
+                                <rect key="frame" x="229" y="410" width="113" height="123"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.20626899379999999" green="0.67410136009999999" blue="0.43896467020000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Breaks">
+                                    <color key="titleColor" systemColor="systemBackgroundColor"/>
+                                </state>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="jXe-Z1-1ud"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemGrayColor"/>
+                        <constraints>
+                            <constraint firstItem="6qn-qr-HRK" firstAttribute="top" secondItem="jXe-Z1-1ud" secondAttribute="top" constant="20" id="0ML-KR-QLd"/>
+                            <constraint firstItem="6qn-qr-HRK" firstAttribute="leading" secondItem="jXe-Z1-1ud" secondAttribute="leading" constant="20" id="3Sx-AX-Iyp"/>
+                            <constraint firstItem="jXe-Z1-1ud" firstAttribute="trailing" secondItem="Vka-xg-vE4" secondAttribute="trailing" constant="50" id="C4d-vK-lo2"/>
+                            <constraint firstItem="6qn-qr-HRK" firstAttribute="top" secondItem="jXe-Z1-1ud" secondAttribute="top" constant="50" id="JfG-i8-LzS"/>
+                            <constraint firstItem="6qn-qr-HRK" firstAttribute="top" secondItem="jXe-Z1-1ud" secondAttribute="top" constant="20" id="Jkw-GR-QFj"/>
+                            <constraint firstItem="6qn-qr-HRK" firstAttribute="leading" secondItem="jXe-Z1-1ud" secondAttribute="leading" constant="50" id="K4F-Tv-H4I"/>
+                            <constraint firstItem="jXe-Z1-1ud" firstAttribute="trailing" secondItem="Vka-xg-vE4" secondAttribute="trailing" constant="50" id="MpF-24-Rij"/>
+                            <constraint firstItem="Vka-xg-vE4" firstAttribute="top" secondItem="jXe-Z1-1ud" secondAttribute="top" constant="50" id="RJZ-L2-eia"/>
+                            <constraint firstItem="jXe-Z1-1ud" firstAttribute="trailing" secondItem="Vka-xg-vE4" secondAttribute="trailing" constant="50" id="VFs-9X-0D5"/>
+                            <constraint firstItem="jXe-Z1-1ud" firstAttribute="trailing" secondItem="Vka-xg-vE4" secondAttribute="trailing" constant="50" id="ZDl-9c-aSV"/>
+                            <constraint firstItem="Vka-xg-vE4" firstAttribute="top" secondItem="jXe-Z1-1ud" secondAttribute="top" constant="20" id="dzL-P6-6la"/>
+                            <constraint firstItem="6qn-qr-HRK" firstAttribute="top" secondItem="jXe-Z1-1ud" secondAttribute="top" constant="50" id="fwK-CM-eGA"/>
+                            <constraint firstItem="Vka-xg-vE4" firstAttribute="top" secondItem="jXe-Z1-1ud" secondAttribute="top" constant="150" id="gAv-qF-heY"/>
+                            <constraint firstItem="Vka-xg-vE4" firstAttribute="top" secondItem="jXe-Z1-1ud" secondAttribute="top" constant="50" id="kKe-N7-e4X"/>
+                            <constraint firstItem="jXe-Z1-1ud" firstAttribute="trailing" secondItem="Vka-xg-vE4" secondAttribute="trailing" constant="150" id="n7f-ec-Yrk"/>
+                            <constraint firstItem="6qn-qr-HRK" firstAttribute="leading" secondItem="jXe-Z1-1ud" secondAttribute="leading" constant="50" id="onR-L5-uBE"/>
+                            <constraint firstItem="Vka-xg-vE4" firstAttribute="top" secondItem="jXe-Z1-1ud" secondAttribute="top" constant="50" id="pw3-Y1-ief"/>
+                            <constraint firstItem="Vka-xg-vE4" firstAttribute="leading" secondItem="6qn-qr-HRK" secondAttribute="trailing" constant="50" id="zTI-LY-TaX"/>
+                            <constraint firstItem="6qn-qr-HRK" firstAttribute="top" secondItem="jXe-Z1-1ud" secondAttribute="top" constant="20" id="ziz-Ap-Cth"/>
+                        </constraints>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Wellness" id="5Vo-rc-7QZ"/>
@@ -307,13 +361,29 @@
                     <view key="view" contentMode="scaleToFill" id="g98-tG-oSW">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lOc-Hy-FHu">
+                                <rect key="frame" x="131" y="285" width="97" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="Ub1-0I-8VZ">
+                                <rect key="frame" x="0.0" y="428" width="414" height="162"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            </datePicker>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="4oA-cw-lPl"/>
                         <color key="backgroundColor" systemColor="systemGreenColor"/>
                     </view>
+                    <connections>
+                        <outlet property="bodyField" destination="lOc-Hy-FHu" id="Xea-NQ-bXs"/>
+                        <outlet property="datePicker" destination="Ub1-0I-8VZ" id="Kdn-tu-fGX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1fn-bF-Fep" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-661" y="2105"/>
+            <point key="canvasLocation" x="-768" y="2046"/>
         </scene>
     </scenes>
     <resources>
@@ -325,6 +395,9 @@
         </systemColor>
         <systemColor name="systemGray3Color">
             <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
