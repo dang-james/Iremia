@@ -129,7 +129,7 @@ extension ChecklistViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         cell.textLabel?.text = taskList[indexPath.row].title
-        //let date = taskList[indexPath.row].date
+        // let date = taskList[indexPath.row].date
         
         let formatter = DateFormatter()
         formatter.dateFormat = "MMM, dd, YYYY, hh:mm a"
