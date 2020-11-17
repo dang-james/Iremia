@@ -12,6 +12,9 @@
 		72C6CC672557569900207526 /* ChecklistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C6CC662557569900207526 /* ChecklistViewController.swift */; };
 		72C6CC6C25575A6000207526 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C6CC6B25575A6000207526 /* AddViewController.swift */; };
 		72F0FBCF2556229B007D49DE /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F0FBCE2556229B007D49DE /* SettingsViewController.swift */; };
+		7F2A095590B6DEAADE421026 /* Pods_IremiaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2224B7E95DA82D54F3F47DB /* Pods_IremiaTests.framework */; };
+		E26C150EF978DFC919BBABD3 /* Pods_Iremia_IremiaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FE894888DA1C4519797B113 /* Pods_Iremia_IremiaUITests.framework */; };
+		E396E0D25A789A08E58E9BDD /* Pods_Iremia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDF7618EB6C8F83F9081834C /* Pods_Iremia.framework */; };
 		F1D2FF7B2554CDCB0075E8C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D2FF7A2554CDCB0075E8C4 /* AppDelegate.swift */; };
 		F1D2FF7D2554CDCB0075E8C4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D2FF7C2554CDCB0075E8C4 /* SceneDelegate.swift */; };
 		F1D2FF812554CDCB0075E8C4 /* WellnessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D2FF802554CDCB0075E8C4 /* WellnessViewController.swift */; };
@@ -40,11 +43,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2BF8EB68236AC00F1646C01E /* Pods-Iremia-IremiaUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Iremia-IremiaUITests.debug.xcconfig"; path = "Target Support Files/Pods-Iremia-IremiaUITests/Pods-Iremia-IremiaUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		2FE894888DA1C4519797B113 /* Pods_Iremia_IremiaUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Iremia_IremiaUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4A4963AD930963D358AADBFC /* Pods-Iremia-IremiaUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Iremia-IremiaUITests.release.xcconfig"; path = "Target Support Files/Pods-Iremia-IremiaUITests/Pods-Iremia-IremiaUITests.release.xcconfig"; sourceTree = "<group>"; };
+		60323AF4E856060ACB53484C /* Pods-IremiaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IremiaTests.debug.xcconfig"; path = "Target Support Files/Pods-IremiaTests/Pods-IremiaTests.debug.xcconfig"; sourceTree = "<group>"; };
+		6DFA594441AE220B64A7D73C /* Pods-IremiaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IremiaTests.release.xcconfig"; path = "Target Support Files/Pods-IremiaTests/Pods-IremiaTests.release.xcconfig"; sourceTree = "<group>"; };
 		716CA6F5255E17EB0095144E /* ExerciseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseViewController.swift; sourceTree = "<group>"; };
 		725472852559201A00954D10 /* TaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewController.swift; sourceTree = "<group>"; };
 		72C6CC662557569900207526 /* ChecklistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChecklistViewController.swift; sourceTree = "<group>"; };
 		72C6CC6B25575A6000207526 /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
 		72F0FBCE2556229B007D49DE /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		C8DCBF9FE96F5DFFB4B5CFAD /* Pods-Iremia.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Iremia.release.xcconfig"; path = "Target Support Files/Pods-Iremia/Pods-Iremia.release.xcconfig"; sourceTree = "<group>"; };
+		D13735D964CD21FC2ABCBCD5 /* Pods-Iremia.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Iremia.debug.xcconfig"; path = "Target Support Files/Pods-Iremia/Pods-Iremia.debug.xcconfig"; sourceTree = "<group>"; };
+		EDF7618EB6C8F83F9081834C /* Pods_Iremia.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Iremia.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1D2FF772554CDCB0075E8C4 /* Iremia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Iremia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1D2FF7A2554CDCB0075E8C4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F1D2FF7C2554CDCB0075E8C4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +70,7 @@
 		F1D2FF9A2554CDCD0075E8C4 /* IremiaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IremiaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1D2FF9E2554CDCD0075E8C4 /* IremiaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IremiaUITests.swift; sourceTree = "<group>"; };
 		F1D2FFA02554CDCD0075E8C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F2224B7E95DA82D54F3F47DB /* Pods_IremiaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IremiaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E396E0D25A789A08E58E9BDD /* Pods_Iremia.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F2A095590B6DEAADE421026 /* Pods_IremiaTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,12 +94,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E26C150EF978DFC919BBABD3 /* Pods_Iremia_IremiaUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4123D715EFE45FABFF9FD0FD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EDF7618EB6C8F83F9081834C /* Pods_Iremia.framework */,
+				2FE894888DA1C4519797B113 /* Pods_Iremia_IremiaUITests.framework */,
+				F2224B7E95DA82D54F3F47DB /* Pods_IremiaTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4D44BF94B52E04A1956D3615 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D13735D964CD21FC2ABCBCD5 /* Pods-Iremia.debug.xcconfig */,
+				C8DCBF9FE96F5DFFB4B5CFAD /* Pods-Iremia.release.xcconfig */,
+				2BF8EB68236AC00F1646C01E /* Pods-Iremia-IremiaUITests.debug.xcconfig */,
+				4A4963AD930963D358AADBFC /* Pods-Iremia-IremiaUITests.release.xcconfig */,
+				60323AF4E856060ACB53484C /* Pods-IremiaTests.debug.xcconfig */,
+				6DFA594441AE220B64A7D73C /* Pods-IremiaTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		F1D2FF6E2554CDCB0075E8C4 = {
 			isa = PBXGroup;
 			children = (
@@ -93,6 +132,8 @@
 				F1D2FF922554CDCD0075E8C4 /* IremiaTests */,
 				F1D2FF9D2554CDCD0075E8C4 /* IremiaUITests */,
 				F1D2FF782554CDCB0075E8C4 /* Products */,
+				4D44BF94B52E04A1956D3615 /* Pods */,
+				4123D715EFE45FABFF9FD0FD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -116,11 +157,11 @@
 				72C6CC662557569900207526 /* ChecklistViewController.swift */,
 				725472852559201A00954D10 /* TaskViewController.swift */,
 				F1D2FF802554CDCB0075E8C4 /* WellnessViewController.swift */,
+				716CA6F5255E17EB0095144E /* ExerciseViewController.swift */,
 				F1D2FF822554CDCB0075E8C4 /* Main.storyboard */,
 				F1D2FF852554CDCD0075E8C4 /* Assets.xcassets */,
 				F1D2FF872554CDCD0075E8C4 /* LaunchScreen.storyboard */,
 				F1D2FF8A2554CDCD0075E8C4 /* Info.plist */,
-				716CA6F5255E17EB0095144E /* ExerciseViewController.swift */,
 			);
 			path = Iremia;
 			sourceTree = "<group>";
@@ -150,9 +191,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F1D2FFA32554CDCD0075E8C4 /* Build configuration list for PBXNativeTarget "Iremia" */;
 			buildPhases = (
+				81120B218B7A0986B602E82F /* [CP] Check Pods Manifest.lock */,
 				F1D2FF732554CDCB0075E8C4 /* Sources */,
 				F1D2FF742554CDCB0075E8C4 /* Frameworks */,
 				F1D2FF752554CDCB0075E8C4 /* Resources */,
+				82CA83F4EC0678F31F35CAED /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -167,6 +210,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F1D2FFA62554CDCD0075E8C4 /* Build configuration list for PBXNativeTarget "IremiaTests" */;
 			buildPhases = (
+				EA0758AA6EF2886ACA1DD896 /* [CP] Check Pods Manifest.lock */,
 				F1D2FF8B2554CDCD0075E8C4 /* Sources */,
 				F1D2FF8C2554CDCD0075E8C4 /* Frameworks */,
 				F1D2FF8D2554CDCD0075E8C4 /* Resources */,
@@ -185,9 +229,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F1D2FFA92554CDCD0075E8C4 /* Build configuration list for PBXNativeTarget "IremiaUITests" */;
 			buildPhases = (
+				373CA09F4BDF3AD682088D19 /* [CP] Check Pods Manifest.lock */,
 				F1D2FF962554CDCD0075E8C4 /* Sources */,
 				F1D2FF972554CDCD0075E8C4 /* Frameworks */,
 				F1D2FF982554CDCD0075E8C4 /* Resources */,
+				BC098D5F4A121598C7A79903 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -268,6 +314,109 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		373CA09F4BDF3AD682088D19 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Iremia-IremiaUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		81120B218B7A0986B602E82F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Iremia-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		82CA83F4EC0678F31F35CAED /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Iremia/Pods-Iremia-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Iremia/Pods-Iremia-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Iremia/Pods-Iremia-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BC098D5F4A121598C7A79903 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Iremia-IremiaUITests/Pods-Iremia-IremiaUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Iremia-IremiaUITests/Pods-Iremia-IremiaUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Iremia-IremiaUITests/Pods-Iremia-IremiaUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EA0758AA6EF2886ACA1DD896 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-IremiaTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F1D2FF732554CDCB0075E8C4 /* Sources */ = {
@@ -452,6 +601,7 @@
 		};
 		F1D2FFA42554CDCD0075E8C4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D13735D964CD21FC2ABCBCD5 /* Pods-Iremia.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -469,6 +619,7 @@
 		};
 		F1D2FFA52554CDCD0075E8C4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C8DCBF9FE96F5DFFB4B5CFAD /* Pods-Iremia.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -486,6 +637,7 @@
 		};
 		F1D2FFA72554CDCD0075E8C4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 60323AF4E856060ACB53484C /* Pods-IremiaTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -507,6 +659,7 @@
 		};
 		F1D2FFA82554CDCD0075E8C4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6DFA594441AE220B64A7D73C /* Pods-IremiaTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -528,6 +681,7 @@
 		};
 		F1D2FFAA2554CDCD0075E8C4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2BF8EB68236AC00F1646C01E /* Pods-Iremia-IremiaUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -547,6 +701,7 @@
 		};
 		F1D2FFAB2554CDCD0075E8C4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4A4963AD930963D358AADBFC /* Pods-Iremia-IremiaUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
