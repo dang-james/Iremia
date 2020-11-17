@@ -15,6 +15,7 @@ class Task: Object {
     @objc dynamic var title: String = ""
     @objc dynamic var body: String = ""
     @objc dynamic var date: Date = Date()
+    @objc dynamic var id: String = ""
 }
 
 class ChecklistViewController: UIViewController {
@@ -145,8 +146,8 @@ extension ChecklistViewController: UITableViewDataSource {
        func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
            if editingStyle == .delete{
             
-            let filter = taskList[indexPath.row].title
-            let myItem = realm.objects(Task.self).filter("title == %@", filter)
+            let filter = taskList[indexPath.row].id
+            let myItem = realm.objects(Task.self).filter("id == %@", filter)
             
             realm.beginWrite()
             realm.delete(myItem)
