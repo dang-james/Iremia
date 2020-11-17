@@ -136,4 +136,24 @@ extension ChecklistViewController: UITableViewDataSource {
         cell.detailTextLabel?.text = formatter.string(from: date)
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
+           return .delete
+       }
+       
+       // Deletes task from array and table and updates table, will delete multiple tasks if they have the same title
+       func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+           if editingStyle == .delete{
+            
+            let filter = taskList[indexPath.row].title
+            let myItem = realm.objects(Task.self).filter("title == %@", filter)
+            
+            realm.beginWrite()
+            realm.delete(myItem)
+            try! realm.commitWrite()
+              
+            self.refresh()
+           }
+       }
+    
 }
