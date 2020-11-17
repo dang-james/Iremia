@@ -39,7 +39,7 @@ class TaskViewController: UIViewController {
         bodyLabel.text = item?.body
         dateLabel.text = Self.dateFormatter.string(from: item!.date)
         
-        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .trash, target: 	self, action: #selector(didTapDelete))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .trash, target: self, action: #selector(didTapDelete))
     }
     
     //if delete task is pressed we remove the task from the database

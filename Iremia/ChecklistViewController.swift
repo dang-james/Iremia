@@ -34,7 +34,6 @@ class ChecklistViewController: UIViewController {
         super.viewDidLoad()
         //populates taskList array with tasks from database
         taskList = realm.objects(Task.self).map({ $0 })
-        table.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         table.delegate = self
         table.dataSource = self
         
@@ -129,12 +128,12 @@ extension ChecklistViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         cell.textLabel?.text = taskList[indexPath.row].title
-        // let date = taskList[indexPath.row].date
+        let date = taskList[indexPath.row].date
         
         let formatter = DateFormatter()
         formatter.dateFormat = "MMM, dd, YYYY, hh:mm a"
         
-        cell.detailTextLabel?.text = formatter.string(from: taskList[indexPath.row].date)
+        cell.detailTextLabel?.text = formatter.string(from: date)
         return cell
     }
 }
