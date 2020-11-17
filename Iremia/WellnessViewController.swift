@@ -33,13 +33,6 @@ class WellnessViewController: UIViewController {
                 
                 let targetDate = date
                 let trigger = UNCalendarNotificationTrigger(dateMatching: Calendar.current.dateComponents([.year, .month, .day, .hour, .minute, .second], from: targetDate), repeats: true)
-
-                //*******************************
-                //@jeff  store the exercise reminder description and date at this point
-                //i believe values are on line 32 and 34
-                //to re-populate fields next time user edits exercise wellness repeat notification
-                //*******************************
-                
                 
                 let notif_id = "exercise_id"
                 //delete old notification repeater

@@ -6,7 +6,14 @@
 //  Copyright © 2020 Iremia. All rights reserved.
 //
 
+import RealmSwift
 import UIKit
+
+//create exercise reminder class for database
+class ExerciseReminder: Object {
+    @objc dynamic var body: String = ""
+    @objc dynamic var date: Date = Date()
+}
 
 class ExerciseViewController: UIViewController, UITextFieldDelegate {
     
@@ -18,17 +25,27 @@ class ExerciseViewController: UIViewController, UITextFieldDelegate {
     //Completion function when page is done
     public var completion: ((String, Date) -> Void)?
     
+    //initialize realm
+    private let realm = try! Realm()
+    //this array stores all past exerciseReminders locally
+    var exerciseReminders = [ExerciseReminder]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         bodyField.delegate = self
         
-        //**********
-        //@jeff I think the pre-populated description and date code will go here
-        bodyField.text = "database words here!!!"
-        //datepicker.date = idk how to make the date preset
-        //**********
+        //intialize the body field text if no notifications have been saved yet
+        bodyField.text = "Enter exercise reminder description"
         
+        //populate local exerciseReminders array with reminders from the database
+        exerciseReminders = realm.objects(ExerciseReminder.self).map({ $0 })
         
+        //if the user has already save a past exercise reminder
+        if(exerciseReminders.count > 0){
+            //set exercise reminder page to show most recently saved body and date
+            bodyField.text = exerciseReminders[exerciseReminders.count-1].body
+            datePicker.date = exerciseReminders[exerciseReminders.count-1].date
+        }
         
         //Creates save button on top right
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Save", style: .done, target: self, action: #selector(didTapSave))
@@ -41,7 +58,15 @@ class ExerciseViewController: UIViewController, UITextFieldDelegate {
         //this saves the values users enter into corresponding variable
         if let bodyText = bodyField.text{
             let targetDate = datePicker.date
-
+            
+            //create an ExerciseReminder with user set values and save it onto the database
+            realm.beginWrite()
+            let newExerciseReminder = ExerciseReminder()
+            newExerciseReminder.body = bodyText
+            newExerciseReminder.date = targetDate
+            realm.add(newExerciseReminder)
+            try! realm.commitWrite()
+            
             //Calls completion function with values
             completion?(bodyText,targetDate)
         }
