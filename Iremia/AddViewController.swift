@@ -6,6 +6,7 @@
 //  Copyright © 2020 Iremia. All rights reserved.
 //
 
+import RealmSwift
 import UIKit
 
 class AddViewController: UIViewController, UITextFieldDelegate {
@@ -14,6 +15,9 @@ class AddViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var titleField: UITextField!
     @IBOutlet var bodyField: UITextField!
     @IBOutlet var datePicker: UIDatePicker!
+    
+    //initalize realm database
+    private let realm = try! Realm()
     
     //Completion function when page is done
     public var completion: ((String, String, Date) -> Void)?
@@ -32,7 +36,17 @@ class AddViewController: UIViewController, UITextFieldDelegate {
            let bodyText = bodyField.text{
             
             let targetDate = datePicker.date
-            
+            let uuidString = UUID().uuidString
+            //insert task with input data onto database
+            realm.beginWrite()
+            let newItem = Task()
+            newItem.title = titleText
+            newItem.body = bodyText
+            newItem.date = targetDate
+            newItem.id = uuidString
+            realm.add(newItem)
+            try! realm.commitWrite()
+
             //Calls completion function with values, which saves each value in a new object in array on ChecklistViewController
             completion?(titleText,bodyText,targetDate)
         }
