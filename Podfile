@@ -15,7 +15,7 @@ target 'Iremia' do
   target 'IremiaUITests' do
     # Pods for testing
   end
-
+	
   pod 'RealmSwift'
 
 end
