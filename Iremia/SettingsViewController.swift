@@ -17,6 +17,7 @@ class SettingsViewController: UIViewController {
         table.delegate = self
         table.dataSource = self
     }
+    //Button that takes to settings
     @IBAction func goSettings(_ sender: Any) {
         let url = URL(string:UIApplication.openSettingsURLString)
         if UIApplication.shared.canOpenURL(url!){
