@@ -61,6 +61,22 @@
             </objects>
             <point key="canvasLocation" x="858" y="1359"/>
         </scene>
+        <!--Settings-->
+        <scene sceneID="bTe-Xi-87n">
+            <objects>
+                <viewController id="fbd-AJ-6JY" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xOy-FV-eq6">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="2wq-iK-x2J"/>
+                        <color key="backgroundColor" systemColor="systemGray3Color"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Settings" id="wzB-Rs-Owg"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4hR-hU-F6n" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="858" y="1359"/>
+        </scene>
         <!--Task View Controller-->
         <scene sceneID="h5j-aX-xBw">
             <objects>
