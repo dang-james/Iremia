@@ -6,22 +6,17 @@
 //  Copyright © 2020 Iremia. All rights reserved.
 //
 
-import RealmSwift
 import UIKit
 
 class TaskViewController: UIViewController {
     
     //Create Reminder object
-    public var item: Task?
-    public var deletionHandler: (() -> Void)?
+    public var item: MyReminder?    
     
     //Create labels for title, body, and date fields
     @IBOutlet var titleLabel: UILabel!
     @IBOutlet var bodyLabel: UILabel!
     @IBOutlet var dateLabel: UILabel!
-    
-    //initialize database
-    private let realm = try! Realm()
     
     //Set format for displaying date
     static let dateFormatter: DateFormatter = {
@@ -39,20 +34,8 @@ class TaskViewController: UIViewController {
         bodyLabel.text = item?.body
         dateLabel.text = Self.dateFormatter.string(from: item!.date)
         
-        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .trash, target: self, action: #selector(didTapDelete))
-    }
-    
-    //if delete task is pressed we remove the task from the database
-    @objc func didTapDelete() {
-        guard let myItem = self.item else {
-            return
-        }
-        realm.beginWrite()
-        realm.delete(myItem)
-        try! realm.commitWrite()
-
-        deletionHandler?()
-        navigationController?.popToRootViewController(animated: true)
+       
+        
     }
     
     
