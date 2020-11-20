@@ -280,6 +280,57 @@
             </objects>
             <point key="canvasLocation" x="22" y="1359"/>
         </scene>
+        <!--Settings-->
+        <scene sceneID="1rL-lK-NiS">
+            <objects>
+                <viewController id="Gnd-3I-grC" customClass="SettingsViewController" customModule="Iremia" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dbl-pF-WOb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="qdg-rO-cNq">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="get-FS-DE8">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="get-FS-DE8" id="gTE-Et-17K">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="syZ-K8-DNx">
+                                                    <rect key="frame" x="356" y="6" width="30" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <state key="normal" title="GO"/>
+                                                    <connections>
+                                                        <action selector="goSettings:" destination="Gnd-3I-grC" eventType="touchUpInside" id="dUV-S7-W0K"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Xc6-21-tKg"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="qdg-rO-cNq" firstAttribute="top" secondItem="Xc6-21-tKg" secondAttribute="top" id="BAN-Nr-Deb"/>
+                            <constraint firstItem="qdg-rO-cNq" firstAttribute="leading" secondItem="Xc6-21-tKg" secondAttribute="leading" id="D47-Fp-Nnz"/>
+                            <constraint firstItem="Xc6-21-tKg" firstAttribute="trailing" secondItem="qdg-rO-cNq" secondAttribute="trailing" id="JXC-eC-RAG"/>
+                            <constraint firstItem="Xc6-21-tKg" firstAttribute="bottom" secondItem="qdg-rO-cNq" secondAttribute="bottom" id="OI1-Bn-4tw"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Settings" id="Ggp-zw-uDZ"/>
+                    <connections>
+                        <outlet property="table" destination="qdg-rO-cNq" id="tJu-al-Bf3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kb2-Sa-sTu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="858" y="1368"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="8gA-L0-ibL">
             <objects>
