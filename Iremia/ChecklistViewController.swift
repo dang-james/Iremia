@@ -40,11 +40,14 @@ class ChecklistViewController: UIViewController {
         table.delegate = self
         table.dataSource = self
         table.separatorColor = #colorLiteral(red: 0.06274510175, green: 0, blue: 0.1921568662, alpha: 1)
-        /*let gradientLayer = CAGradientLayer()
+        table.separatorInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        table.backgroundColor = #colorLiteral(red: 0.6792625189, green: 0.8248208165, blue: 0.7395270467, alpha: 0)
+        let gradientLayer = CAGradientLayer()
         gradientLayer.frame = view.bounds
         gradientLayer.colors = [#colorLiteral(red: 0.6792625189, green: 0.8248208165, blue: 0.7395270467, alpha: 1).cgColor, #colorLiteral(red: 0.3338187337, green: 0.3300850391, blue: 0.5314263105, alpha: 1).cgColor]
         gradientLayer.shouldRasterize = true
-        backgroundGradientView.layer.addSublayer(gradientLayer)*/
+        backgroundGradientView.layer.addSublayer(gradientLayer)
+        self.view.addSubview(table)
         
     }
     
@@ -110,7 +113,6 @@ extension ChecklistViewController: UITableViewDelegate {
         guard let vc = storyboard?.instantiateViewController(identifier: "task") as? TaskViewController else {
             return
         }
-        
         vc.item = item
         //if item gets deleted table refeshes
         vc.deletionHandler = { [weak self] in
