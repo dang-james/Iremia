@@ -16,7 +16,7 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
                         <rect key="frame" x="0.0" y="975" width="768" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="0.041221769496942305" green="0.039938142908462433" blue="0.07945352157360408" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </tabBar>
                     <connections>
                         <segue destination="FeI-Dj-PQd" kind="relationship" relationship="viewControllers" id="ah8-eH-jUx"/>
@@ -32,10 +32,20 @@
         <scene sceneID="qib-RX-wDL">
             <objects>
                 <navigationController id="FeI-Dj-PQd" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Checklist" selectedImage="pencil" catalog="system" id="eFS-UW-HSS"/>
+                    <tabBarItem key="tabBarItem" title="Checklist" selectedImage="pencil" catalog="system" id="eFS-UW-HSS">
+                        <color key="badgeColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBarItem>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="Q6a-6I-9fA">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.041221769499999998" green="0.039938142910000002" blue="0.079453521570000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="barTintColor" red="0.041221769499999998" green="0.039938142910000002" blue="0.079453521570000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="ISp-En-649" kind="relationship" relationship="rootViewController" id="5Q6-zD-DrA"/>
@@ -248,7 +258,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7jb-a0-laA">
-                                <rect key="frame" x="190" y="160" width="204" height="150"/>
+                                <rect key="frame" x="190" y="160" width="150" height="150"/>
                                 <color key="backgroundColor" red="0.20626899379999999" green="0.67410136009999999" blue="0.43896467020000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="150" id="8Kf-ca-dNd"/>
@@ -279,7 +289,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zKD-at-8cM">
-                                <rect key="frame" x="172" y="330" width="222" height="463"/>
+                                <rect key="frame" x="172" y="330" width="168" height="463"/>
                                 <color key="backgroundColor" red="0.20626899379999999" green="0.67410136009999999" blue="0.43896467020000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Breaks">
                                     <color key="titleColor" systemColor="systemBackgroundColor"/>
