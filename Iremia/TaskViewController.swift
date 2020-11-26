@@ -39,7 +39,9 @@ class TaskViewController: UIViewController {
         bodyLabel.text = item?.body
         dateLabel.text = Self.dateFormatter.string(from: item!.date)
         
-        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .trash, target: self, action: #selector(didTapDelete))
+        let delete = UIBarButtonItem(barButtonSystemItem: .trash, target: self, action: #selector(didTapDelete))
+        let edit = UIBarButtonItem(barButtonSystemItem: .edit, target: self, action: #selector(didTapEdit))
+        navigationItem.rightBarButtonItems = [delete, edit]
     }
     
     //if delete task is pressed we remove the task from the database
@@ -55,6 +57,13 @@ class TaskViewController: UIViewController {
         navigationController?.popToRootViewController(animated: true)
     }
     
-    
-
+    @objc func didTapEdit() {
+        guard let vc = storyboard?.instantiateViewController(identifier: "edit") as? EditViewController else {
+            return
+        }
+        
+        vc.title = "Edit"
+        vc.navigationItem.largeTitleDisplayMode = .never
+        navigationController?.pushViewController(vc, animated: true)
+    }
 }
