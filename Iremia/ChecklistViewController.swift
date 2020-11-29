@@ -118,6 +118,10 @@ extension ChecklistViewController: UITableViewDelegate {
         vc.deletionHandler = { [weak self] in
             self?.refresh()
         }
+        //if item gets edited table refreshes
+        vc.editHandler = { [weak self] in
+            self?.refresh()
+        }
         
         vc.navigationItem.largeTitleDisplayMode = .never
         vc.title = item.title

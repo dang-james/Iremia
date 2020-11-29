@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		33108150256DDCAC00E2043E /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3310814F256DDCAC00E2043E /* EditViewController.swift */; };
 		3BB43E39E3A9C9D1F2E03D84 /* Pods_Iremia_IremiaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF29CCD9CB9B3FB5371657AD /* Pods_Iremia_IremiaUITests.framework */; };
 		52D890C23D7126EBC7BBE1D1 /* Pods_IremiaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA31D1BD8F5192773FC52A27 /* Pods_IremiaTests.framework */; };
 		71D3D945256757E600F09981 /* ExerciseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D3D944256757E600F09981 /* ExerciseViewController.swift */; };
@@ -48,6 +49,7 @@
 /* Begin PBXFileReference section */
 		0663CA4A6164B95B598529DC /* Pods-IremiaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IremiaTests.debug.xcconfig"; path = "Target Support Files/Pods-IremiaTests/Pods-IremiaTests.debug.xcconfig"; sourceTree = "<group>"; };
 		29E252010835995136673438 /* Pods_Iremia.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Iremia.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3310814F256DDCAC00E2043E /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
 		5750D0A41AAF6FBA53A796F5 /* Pods-Iremia-IremiaUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Iremia-IremiaUITests.debug.xcconfig"; path = "Target Support Files/Pods-Iremia-IremiaUITests/Pods-Iremia-IremiaUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		71D3D944256757E600F09981 /* ExerciseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseViewController.swift; sourceTree = "<group>"; };
 		71D3D949256757F000F09981 /* BreaksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreaksViewController.swift; sourceTree = "<group>"; };
@@ -160,6 +162,7 @@
 				72F0FBCE2556229B007D49DE /* SettingsViewController.swift */,
 				72C6CC6B25575A6000207526 /* AddViewController.swift */,
 				72C6CC662557569900207526 /* ChecklistViewController.swift */,
+				3310814F256DDCAC00E2043E /* EditViewController.swift */,
 				725472852559201A00954D10 /* TaskViewController.swift */,
 				F1D2FF802554CDCB0075E8C4 /* WellnessViewController.swift */,
 				F1D2FF822554CDCB0075E8C4 /* Main.storyboard */,
@@ -260,7 +263,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1130;
-				LastUpgradeCheck = 1130;
+				LastUpgradeCheck = 1210;
 				ORGANIZATIONNAME = Iremia;
 				TargetAttributes = {
 					F1D2FF762554CDCB0075E8C4 = {
@@ -439,6 +442,7 @@
 				72C6CC6C25575A6000207526 /* AddViewController.swift in Sources */,
 				F1D2FF7B2554CDCB0075E8C4 /* AppDelegate.swift in Sources */,
 				72C6CC672557569900207526 /* ChecklistViewController.swift in Sources */,
+				33108150256DDCAC00E2043E /* EditViewController.swift in Sources */,
 				71D3D94F256757F900F09981 /* MealsViewController.swift in Sources */,
 				71D3D945256757E600F09981 /* ExerciseViewController.swift in Sources */,
 				F1D2FF7D2554CDCB0075E8C4 /* SceneDelegate.swift in Sources */,
@@ -522,6 +526,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -582,6 +587,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
