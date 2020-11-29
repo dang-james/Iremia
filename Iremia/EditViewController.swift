@@ -22,6 +22,9 @@ class EditViewController: UIViewController, UITextFieldDelegate {
     let realm = try! Realm()
 
     //Completion function when page is done
+    public var completion: ((String, String, Date) -> Void)?
+    
+    //Load existing task title, body, date
     override func viewDidLoad() {
         super.viewDidLoad()
         titleField.delegate = self
@@ -39,6 +42,7 @@ class EditViewController: UIViewController, UITextFieldDelegate {
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Save", style: .done, target: self, action: #selector(didTapSave))
     }
     
+    //Saves edited task
     @objc func didTapSave() {
         //As long as title text is not empty, this saves the values users enter into corresponding variable
         if let titleText = titleField.text, !titleText.isEmpty,
@@ -55,7 +59,8 @@ class EditViewController: UIViewController, UITextFieldDelegate {
                 myItem[0].body = bodyText
                 myItem[0].date = targetDate
             }
-        
+            //Calls completion function with values to create a new notification for edited task
+            completion?(titleText,bodyText,targetDate)
         }
         navigationController?.popToRootViewController(animated: true)
     }

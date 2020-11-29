@@ -91,6 +91,33 @@ class TaskViewController: UIViewController {
         
         vc.title = "Edit"
         vc.navigationItem.largeTitleDisplayMode = .never
+        
+        //When edit task is done, creates notification with new inputted data
+        vc.completion = {title, body, date in
+            DispatchQueue.main.async {
+                //Creating MyReminder object
+                self.navigationController?.popToRootViewController(animated: true)
+                
+                // Creating notification
+                let content = UNMutableNotificationContent()
+                content.title = title
+                content.sound = .default
+                content.body = body
+                
+                let targetDate = date
+                                let trigger = UNCalendarNotificationTrigger(dateMatching: Calendar.current.dateComponents([.year, .month, .day, .hour, .minute, .second],
+                                                                                                                          from: targetDate),
+                                                                            repeats: false)
+
+                                let request = UNNotificationRequest(identifier: "some_long_id", content: content, trigger: trigger)
+                                UNUserNotificationCenter.current().add(request, withCompletionHandler: { error in
+                                    if error != nil {
+                                        print("something went wrong")
+                                    }
+                                })
+            }
+            
+        }
         editHandler?()
         navigationController?.pushViewController(vc, animated: true)
     }
