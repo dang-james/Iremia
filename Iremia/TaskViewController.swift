@@ -44,8 +44,26 @@ class TaskViewController: UIViewController {
         navigationItem.rightBarButtonItems = [delete, edit]
     }
     
-    //if delete task is pressed we remove the task from the database
+    //if delete task is pressed, create a popup to confirm
     @objc func didTapDelete() {
+        let dialogMessage = UIAlertController(title: "Confirm", message: "Are you sure you want to delete the task?", preferredStyle: .alert)
+        
+        //create ok button, moves to delete()
+        let ok = UIAlertAction(title: "OK", style: .default, handler: { (action) -> Void in
+             self.delete()
+        })
+        //create cancel button
+        let cancel = UIAlertAction(title: "Cancel", style: .cancel) { (action) -> Void in
+        }
+        
+        dialogMessage.addAction(ok)
+        dialogMessage.addAction(cancel)
+        
+        self.present(dialogMessage, animated: true, completion: nil)
+    }
+    
+    //remove task from database
+    func delete() {
         guard let myItem = self.item else {
             return
         }
