@@ -8,10 +8,34 @@
 import UIKit
 
 class WellnessViewController: UIViewController {
-
+    
+    @IBOutlet weak var backgroundGradientView: UIView!
+    
+    @IBOutlet weak var exerciseButton:UIView!
+    @IBOutlet weak var sleepButton:UIView!
+    @IBOutlet weak var mealsButton:UIView!
+    @IBOutlet weak var breaksButton:UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.frame = view.bounds
+        gradientLayer.colors = [#colorLiteral(red: 0.3338187337, green: 0.3300850391, blue: 0.5314263105, alpha: 1).cgColor, #colorLiteral(red: 0.6792625189, green: 0.8248208165, blue: 0.7395270467, alpha: 1).cgColor]
+        gradientLayer.shouldRasterize = true
+        backgroundGradientView.layer.addSublayer(gradientLayer)
+        
+        exerciseButton.layer.cornerRadius = 20
+        sleepButton.layer.cornerRadius = 20
+        mealsButton.layer.cornerRadius = 20
+        breaksButton.layer.cornerRadius = 20
+        
+        
+        self.view.addSubview(exerciseButton)
+        self.view.addSubview(sleepButton)
+        self.view.addSubview(mealsButton)
+        self.view.addSubview(breaksButton)
+        
     }
     
     @IBAction func didTapExercise(_ sender: UIButton){

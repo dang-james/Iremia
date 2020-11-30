@@ -17,6 +17,8 @@ class MealsReminder: Object {
 
 class MealsViewController: UIViewController, UITextFieldDelegate {
     
+    @IBOutlet weak var backgroundGradientView: UIView!
+    
     //Creates fields where users enter values for each field
     //@IBOutlet var titleField: UITextField!
     @IBOutlet var bodyField: UITextField!
@@ -49,6 +51,16 @@ class MealsViewController: UIViewController, UITextFieldDelegate {
         
         //Creates save button on top right
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Save", style: .done, target: self, action: #selector(didTapSave))
+        
+        //background gradient
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.frame = view.bounds
+        gradientLayer.colors = [#colorLiteral(red: 0.3338187337, green: 0.3300850391, blue: 0.5314263105, alpha: 1).cgColor, #colorLiteral(red: 0.6792625189, green: 0.8248208165, blue: 0.7395270467, alpha: 1).cgColor]
+        gradientLayer.shouldRasterize = true
+        backgroundGradientView.layer.addSublayer(gradientLayer)
+        
+        self.view.addSubview(bodyField)
+        self.view.addSubview(datePicker)
     }
     
     @objc func didTapSave() {
