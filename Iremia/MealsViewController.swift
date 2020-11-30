@@ -64,22 +64,17 @@ class MealsViewController: UIViewController, UITextFieldDelegate {
     }
     
     @objc func didTapSave() {
-        let dialogMessage = UIAlertController(title: "Confirm", message: "Are you sure you want to save?", preferredStyle: .alert)
+        //Creates an alert to notify user that inputs have been saved.
+        let saveAlert = UIAlertController(title: "Saved", message: "Your wellness notification has been saved.", preferredStyle: .alert)
         
-        //create ok button, moves to delete()
-        let ok = UIAlertAction(title: "Save", style: .default, handler: { (action) -> Void in
+        //Button to dismiss alert and calls the save function
+        saveAlert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (action) -> Void in
              self.save()
-        })
-        //create cancel button
-        let cancel = UIAlertAction(title: "Cancel", style: .cancel) { (action) -> Void in
-        }
-        
-        dialogMessage.addAction(ok)
-        dialogMessage.addAction(cancel)
-        
-        self.present(dialogMessage, animated: true, completion: nil)
+        }))
+        self.present(saveAlert, animated: true, completion: nil)
     }
     
+    //function to save wellness reminder in database and create notification
     func save() {
         //return to previous page
         self.navigationController?.popToRootViewController(animated: true)
