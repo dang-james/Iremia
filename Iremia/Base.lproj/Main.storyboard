@@ -315,7 +315,7 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="jXe-Z1-1ud"/>
-                        <color key="backgroundColor" systemColor="systemBlueColor"/>
+                        <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
                         <constraints>
                             <constraint firstItem="7jb-a0-laA" firstAttribute="top" secondItem="jXe-Z1-1ud" secondAttribute="top" constant="80" id="3AB-xR-8Hv"/>
                             <constraint firstItem="cEV-PU-GHo" firstAttribute="leading" secondItem="jXe-Z1-1ud" secondAttribute="leading" constant="36" id="F0U-c6-MH4"/>
@@ -329,9 +329,7 @@
                             <constraint firstItem="P7q-XI-hBb" firstAttribute="top" secondItem="cEV-PU-GHo" secondAttribute="bottom" constant="36" id="u5j-Hr-zao"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Wellness" id="5Vo-rc-7QZ">
-                        <barButtonItem key="rightBarButtonItem" title="Add" id="I0p-gt-jC4"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Wellness" id="5Vo-rc-7QZ"/>
                     <connections>
                         <outlet property="backgroundGradientView" destination="fmZ-xj-PCu" id="4gK-l8-SwV"/>
                         <outlet property="breaksButton" destination="zKD-at-8cM" id="Xb1-Ha-sgq"/>
@@ -471,7 +469,7 @@
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YIs-se-4aQ">
                                 <rect key="frame" x="10" y="144" width="394" height="34"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="C6u-AT-r3u">
@@ -511,7 +509,7 @@
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3j7-rF-REL">
                                 <rect key="frame" x="10" y="144" width="394" height="34"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="m5N-Yo-lye">
@@ -551,7 +549,7 @@
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DaG-bx-La9">
                                 <rect key="frame" x="10" y="144" width="394" height="34"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="scg-2k-jJu">
@@ -591,7 +589,7 @@
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KrD-n4-cRB">
                                 <rect key="frame" x="10" y="144" width="394" height="34"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="jzs-96-Wro">
@@ -685,11 +683,11 @@
         <image name="heart.fill" catalog="system" width="128" height="109"/>
         <image name="pencil" catalog="system" width="128" height="113"/>
         <image name="square.and.arrow.up.fill" catalog="system" width="115" height="128"/>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemBlueColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
