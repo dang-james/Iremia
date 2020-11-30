@@ -34,9 +34,7 @@ class BreaksViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         bodyField.delegate = self
-        
-        //intialize the body field text if no notifications have been saved yet
-        bodyField.text = "Enter breaks reminder description"
+        bodyField.attributedPlaceholder = NSAttributedString(string: "Enter break reminder description", attributes: [NSAttributedString.Key.foregroundColor: #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)])
         
         //populate local breaksReminders array with reminders from the database
         breaksReminders = realm.objects(BreaksReminder.self).map({ $0 })

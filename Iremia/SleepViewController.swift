@@ -35,9 +35,7 @@ class SleepViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         bodyField.delegate = self
-        
-        //intialize the body field text if no notifications have been saved yet
-        bodyField.text = "Enter sleep reminder description"
+        bodyField.attributedPlaceholder = NSAttributedString(string: "Enter sleep reminder description", attributes: [NSAttributedString.Key.foregroundColor: #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)])
         
         //populate local sleepReminders array with reminders from the database
         sleepReminders = realm.objects(SleepReminder.self).map({ $0 })
