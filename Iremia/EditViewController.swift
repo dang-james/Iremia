@@ -24,6 +24,10 @@ class EditViewController: UIViewController, UITextFieldDelegate {
     //Completion function when page is done
     public var completion: ((String, String, Date) -> Void)?
     
+    //background gradient
+    @IBOutlet weak var backgroundGradientView: UIView!
+
+    
     //Load existing task title, body, date
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,6 +41,19 @@ class EditViewController: UIViewController, UITextFieldDelegate {
         titleField.text = myItem[0].title
         bodyField.text = myItem[0].body
         datePicker.date = myItem[0].date
+        
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.frame = view.bounds
+        gradientLayer.colors = [#colorLiteral(red: 0.3338187337, green: 0.3300850391, blue: 0.5314263105, alpha: 1).cgColor, #colorLiteral(red: 0.6792625189, green: 0.8248208165, blue: 0.7395270467, alpha: 1).cgColor]
+        gradientLayer.shouldRasterize = true
+        backgroundGradientView.layer.addSublayer(gradientLayer)
+        titleField.attributedPlaceholder = NSAttributedString(string: "placeholder text", attributes: [NSAttributedString.Key.foregroundColor: #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)])
+        bodyField.attributedPlaceholder = NSAttributedString(string: "placeholder text", attributes: [NSAttributedString.Key.foregroundColor: #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)])
+        titleField.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        bodyField.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        self.view.addSubview(titleField)
+        self.view.addSubview(bodyField)
+        self.view.addSubview(datePicker)
         
         //Creates save button on top right
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Save", style: .done, target: self, action: #selector(didTapSave))
