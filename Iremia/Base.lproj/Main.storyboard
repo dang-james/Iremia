@@ -255,12 +255,13 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="UIButton" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cEV-PU-GHo">
                                 <rect key="frame" x="20" y="160" width="150" height="150"/>
-                                <color key="backgroundColor" red="0.20626899379999999" green="0.67410136009999999" blue="0.43896467020000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" red="0.13977056170928162" green="0.096466295726321954" blue="0.43053756476683935" alpha="0.60007702464788737" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="KdX-lu-krT"/>
                                     <constraint firstAttribute="width" constant="150" id="NlZ-Or-F3a"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="zDG-4S-KI3"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Exercise">
                                     <color key="titleColor" systemColor="systemBackgroundColor"/>
                                 </state>
@@ -269,7 +270,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7jb-a0-laA">
-                                <rect key="frame" x="190" y="160" width="204" height="150"/>
+                                <rect key="frame" x="190" y="160" width="150" height="150"/>
                                 <color key="backgroundColor" red="0.20626899379999999" green="0.67410136009999999" blue="0.43896467020000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="150" id="8Kf-ca-dNd"/>
@@ -279,6 +280,7 @@
                                     <constraint firstAttribute="height" constant="150" id="jlw-bK-mrN"/>
                                     <constraint firstAttribute="width" constant="150" id="v5z-GZ-671"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Sleep">
                                     <color key="titleColor" systemColor="systemBackgroundColor"/>
                                 </state>
@@ -292,6 +294,7 @@
                                 <constraints>
                                     <constraint firstAttribute="width" constant="132" id="shM-RZ-ufm"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Meals">
                                     <color key="titleColor" systemColor="systemBackgroundColor"/>
                                 </state>
@@ -300,8 +303,9 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zKD-at-8cM">
-                                <rect key="frame" x="172" y="330" width="222" height="463"/>
+                                <rect key="frame" x="172" y="330" width="168" height="463"/>
                                 <color key="backgroundColor" red="0.20626899379999999" green="0.67410136009999999" blue="0.43896467020000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Breaks">
                                     <color key="titleColor" systemColor="systemBackgroundColor"/>
                                 </state>
@@ -334,6 +338,13 @@
                     <navigationItem key="navigationItem" title="Wellness" id="5Vo-rc-7QZ">
                         <barButtonItem key="rightBarButtonItem" title="Add" id="I0p-gt-jC4"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="backgroundGradientView" destination="fmZ-xj-PCu" id="4gK-l8-SwV"/>
+                        <outlet property="breaksButton" destination="zKD-at-8cM" id="Xb1-Ha-sgq"/>
+                        <outlet property="exerciseButton" destination="cEV-PU-GHo" id="o3Y-pb-obk"/>
+                        <outlet property="mealsButton" destination="P7q-XI-hBb" id="WTg-Xa-CKd"/>
+                        <outlet property="sleepButton" destination="7jb-a0-laA" id="KhH-r5-0Om"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TLi-Ag-7nt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -383,7 +394,8 @@
                     </view>
                     <navigationItem key="navigationItem" title="Settings" id="Ggp-zw-uDZ"/>
                     <connections>
-                        <outlet property="table" destination="qdg-rO-cNq" id="tJu-al-Bf3"/>
+                        <outlet property="backgroundGradientView" destination="dbl-pF-WOb" id="NF2-bN-NZF"/>
+                        <outlet property="table" destination="qdg-rO-cNq" id="dKk-nz-Cqr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kb2-Sa-sTu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -470,6 +482,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="backgroundGradientView" destination="STy-4C-RR4" id="jWL-TA-bbX"/>
                         <outlet property="bodyField" destination="YIs-se-4aQ" id="7I5-aO-gSv"/>
                         <outlet property="datePicker" destination="C6u-AT-r3u" id="bjT-1k-D6U"/>
                     </connections>
@@ -509,6 +522,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="backgroundGradientView" destination="hqM-Lw-rFB" id="Rhd-nA-KVE"/>
                         <outlet property="bodyField" destination="3j7-rF-REL" id="smY-bm-mvz"/>
                         <outlet property="datePicker" destination="m5N-Yo-lye" id="UMN-GP-nlI"/>
                     </connections>
@@ -548,6 +562,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="backgroundGradientView" destination="QXL-7j-Msf" id="UeW-sU-fey"/>
                         <outlet property="bodyField" destination="DaG-bx-La9" id="W1l-0e-1eU"/>
                         <outlet property="datePicker" destination="scg-2k-jJu" id="tvq-1j-5lj"/>
                     </connections>
@@ -587,6 +602,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="backgroundGradientView" destination="acs-lr-v97" id="ywU-1G-ZJq"/>
                         <outlet property="bodyField" destination="KrD-n4-cRB" id="pmv-Kp-6g3"/>
                         <outlet property="datePicker" destination="jzs-96-Wro" id="aD3-0N-CaP"/>
                     </connections>
