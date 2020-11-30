@@ -41,6 +41,8 @@ class AddViewController: UIViewController, UITextFieldDelegate {
         bodyField.attributedPlaceholder = NSAttributedString(string: "Description", attributes: [NSAttributedString.Key.foregroundColor: #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)])
         titleField.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         bodyField.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        self.navigationController?.navigationBar.barTintColor = #colorLiteral(red: 0.1081496552, green: 0.115949668, blue: 0.2311390638, alpha: 1)
+        self.navigationController?.navigationBar.backgroundColor = #colorLiteral(red: 0.1081496552, green: 0.115949668, blue: 0.2311390638, alpha: 1)
         self.view.addSubview(titleField)
         self.view.addSubview(bodyField)
         self.view.addSubview(datePicker)

@@ -55,7 +55,9 @@ class TaskViewController: UIViewController {
         titleLabel.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         bodyLabel.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         dateLabel.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
-        
+        self.navigationController?.navigationBar.barTintColor = #colorLiteral(red: 0.1081496552, green: 0.115949668, blue: 0.2311390638, alpha: 1)
+        self.navigationController?.navigationBar.backgroundColor = #colorLiteral(red: 0.1081496552, green: 0.115949668, blue: 0.2311390638, alpha: 1)
+
         self.view.addSubview(titleLabel)
         self.view.addSubview(bodyLabel)
         self.view.addSubview(dateLabel)
