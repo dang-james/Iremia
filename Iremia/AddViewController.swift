@@ -22,12 +22,25 @@ class AddViewController: UIViewController, UITextFieldDelegate {
     //Completion function when page is done
     public var completion: ((String, String, Date) -> Void)?
     
+    //background gradient
+    @IBOutlet weak var backgroundGradientView: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         titleField.delegate = self
         bodyField.delegate = self
         //Creates save button on top right
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Save", style: .done, target: self, action: #selector(didTapSave))
+        
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.frame = view.bounds
+        gradientLayer.colors = [#colorLiteral(red: 0.3338187337, green: 0.3300850391, blue: 0.5314263105, alpha: 1).cgColor, #colorLiteral(red: 0.6792625189, green: 0.8248208165, blue: 0.7395270467, alpha: 1).cgColor]
+        gradientLayer.shouldRasterize = true
+        backgroundGradientView.layer.addSublayer(gradientLayer)
+        self.view.addSubview(titleField)
+        self.view.addSubview(bodyField)
+        self.view.addSubview(datePicker)
+        
     }
     
     @objc func didTapSave() {

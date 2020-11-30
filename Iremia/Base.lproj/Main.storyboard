@@ -11,10 +11,11 @@
         <scene sceneID="yl2-sM-qoP">
             <objects>
                 <tabBarController id="49e-Tb-3d3" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
+                    <tabBar key="tabBar" contentMode="scaleToFill" translucent="NO" id="W28-zg-YXA">
                         <rect key="frame" x="0.0" y="975" width="768" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" red="0.11101879551458442" green="0.11780133782146082" blue="0.214784264" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </tabBar>
                     <connections>
                         <segue destination="FeI-Dj-PQd" kind="relationship" relationship="viewControllers" id="ah8-eH-jUx"/>
@@ -30,10 +31,20 @@
         <scene sceneID="qib-RX-wDL">
             <objects>
                 <navigationController id="FeI-Dj-PQd" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Checklist" selectedImage="pencil" catalog="system" id="eFS-UW-HSS"/>
+                    <tabBarItem key="tabBarItem" title="Checklist" selectedImage="pencil" catalog="system" id="eFS-UW-HSS">
+                        <color key="badgeColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBarItem>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="Q6a-6I-9fA">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.11101879551458442" green="0.11780133782146082" blue="0.214784264" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="barTintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="ISp-En-649" kind="relationship" relationship="rootViewController" id="5Q6-zD-DrA"/>
@@ -95,6 +106,7 @@
                         <viewLayoutGuide key="safeArea" id="bFj-PA-ioy"/>
                     </view>
                     <connections>
+                        <outlet property="backgroundGradientView" destination="xGB-6K-qrI" id="70A-g8-SyG"/>
                         <outlet property="bodyLabel" destination="bVR-9C-RBE" id="sob-6d-8DN"/>
                         <outlet property="dateLabel" destination="7DA-ZG-E7C" id="7K5-LP-Py8"/>
                         <outlet property="titleLabel" destination="Lms-lQ-aBU" id="90H-ak-gDd"/>
@@ -109,12 +121,13 @@
             <objects>
                 <viewController id="ISp-En-649" customClass="ChecklistViewController" customModule="Iremia" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jjW-Ot-f30">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7Sa-pT-wbR">
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" textLabel="2eI-D9-0Bu" detailTextLabel="AwO-PE-ClK" style="IBUITableViewCellStyleSubtitle" id="6Bq-WC-Mbt">
                                         <rect key="frame" x="0.0" y="28" width="414" height="55.5"/>
@@ -127,18 +140,19 @@
                                                     <rect key="frame" x="20" y="10" width="33.5" height="20.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="AwO-PE-ClK">
                                                     <rect key="frame" x="20" y="31.5" width="44" height="14.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                    <nil key="textColor"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.338703653335994" green="0.328156580264092" blue="0.65283946700507611" alpha="0.22562607020547945" colorSpace="custom" customColorSpace="displayP3"/>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -152,14 +166,15 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="UgE-Up-sJ3"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Tasks" id="mqz-Gn-6ta">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="E6l-3g-Ogs">
+                    <navigationItem key="navigationItem" title="Tasks" id="42r-mF-DPK">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="ODw-xn-k9l">
                             <connections>
-                                <action selector="didTapAdd" destination="ISp-En-649" id="sFd-0i-twl"/>
+                                <action selector="didTapAdd" destination="ISp-En-649" id="Orh-iO-m5W"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="backgroundGradientView" destination="jjW-Ot-f30" id="WAg-ra-MMS"/>
                         <outlet property="table" destination="7Sa-pT-wbR" id="anQ-Ji-E7M"/>
                     </connections>
                 </viewController>
@@ -177,23 +192,31 @@
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="o6a-aE-evB">
                                 <rect key="frame" x="10" y="54" width="394" height="52"/>
+                                <color key="backgroundColor" red="0.33870365330000002" green="0.3281565803" blue="0.65283946699999995" alpha="0.050000000000000003" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="52" id="pUf-Kt-9ZW"/>
                                 </constraints>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Description" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bxT-W9-TpS">
                                 <rect key="frame" x="10" y="126" width="394" height="52"/>
+                                <color key="backgroundColor" red="0.338703653335994" green="0.328156580264092" blue="0.65283946700507611" alpha="0.050000000000000003" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="52" id="rXI-b0-hI9"/>
                                 </constraints>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="ebF-Xw-dLy">
                                 <rect key="frame" x="0.0" y="272" width="414" height="162"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.33870365330000002" green="0.3281565803" blue="0.65283946699999995" alpha="0.2256260702" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="tintColor" systemColor="labelColor"/>
                             </datePicker>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -210,6 +233,7 @@
                         <viewLayoutGuide key="safeArea" id="fFt-hC-HjZ"/>
                     </view>
                     <connections>
+                        <outlet property="backgroundGradientView" destination="2XB-u9-jY4" id="pdT-5Z-5M1"/>
                         <outlet property="bodyField" destination="bxT-W9-TpS" id="bDU-pK-ra3"/>
                         <outlet property="datePicker" destination="ebF-Xw-dLy" id="OXQ-mU-Fco"/>
                         <outlet property="titleField" destination="o6a-aE-evB" id="LYi-c1-kPS"/>
@@ -224,7 +248,7 @@
             <objects>
                 <viewController id="BoM-qR-YYM" customClass="WellnessViewController" customModule="Iremia" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fmZ-xj-PCu">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="UIButton" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cEV-PU-GHo">
@@ -242,8 +266,9 @@
                                     <action selector="didTapExercise:" destination="BoM-qR-YYM" eventType="primaryActionTriggered" id="cl6-zs-G9x"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7jb-a0-laA">
-                                <rect key="frame" x="190" y="160" width="204" height="150"/>
+
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7jb-a0-laA">
+                                <rect key="frame" x="190" y="160" width="150" height="150"/>
                                 <color key="backgroundColor" red="0.20626899379999999" green="0.67410136009999999" blue="0.43896467020000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="150" id="8Kf-ca-dNd"/>
@@ -273,8 +298,8 @@
                                     <action selector="didTapMeals:" destination="BoM-qR-YYM" eventType="primaryActionTriggered" id="0wZ-Fo-Di1"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zKD-at-8cM">
-                                <rect key="frame" x="172" y="330" width="222" height="463"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zKD-at-8cM">
+                                <rect key="frame" x="172" y="330" width="168" height="463"/>
                                 <color key="backgroundColor" red="0.20626899379999999" green="0.67410136009999999" blue="0.43896467020000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Breaks">
                                     <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -318,12 +343,12 @@
             <objects>
                 <viewController id="Gnd-3I-grC" customClass="SettingsViewController" customModule="Iremia" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dbl-pF-WOb">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="qdg-rO-cNq">
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="get-FS-DE8">
                                         <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
@@ -623,8 +648,20 @@
         </scene>
     </scenes>
     <resources>
-        <image name="heart.fill" catalog="system" width="64" height="54"/>
-        <image name="pencil" catalog="system" width="64" height="56"/>
-        <image name="square.and.arrow.up.fill" catalog="system" width="56" height="64"/>
+        <image name="heart.fill" catalog="system" width="128" height="109"/>
+        <image name="pencil" catalog="system" width="128" height="113"/>
+        <image name="square.and.arrow.up.fill" catalog="system" width="115" height="128"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
     </resources>
 </document>
