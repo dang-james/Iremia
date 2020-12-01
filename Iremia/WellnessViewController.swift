@@ -16,6 +16,8 @@ class WellnessViewController: UIViewController {
     @IBOutlet weak var mealsButton:UIView!
     @IBOutlet weak var breaksButton:UIView!
     
+    @IBOutlet weak var subDescription:UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -35,6 +37,7 @@ class WellnessViewController: UIViewController {
         self.view.addSubview(sleepButton)
         self.view.addSubview(mealsButton)
         self.view.addSubview(breaksButton)
+        self.view.addSubview(subDescription)
         
     }
     

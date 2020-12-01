@@ -22,6 +22,10 @@ class ExerciseViewController: UIViewController, UITextFieldDelegate {
     //@IBOutlet var titleField: UITextField!
     @IBOutlet var bodyField: UITextField!
     @IBOutlet var datePicker: UIDatePicker!
+    
+    @IBOutlet var fieldLabel: UILabel!
+    @IBOutlet var dateLabel: UILabel!
+    
     //Completion function when page is done
     public var completion: ((String, Date) -> Void)?
     
@@ -59,6 +63,8 @@ class ExerciseViewController: UIViewController, UITextFieldDelegate {
         
         self.view.addSubview(bodyField)
         self.view.addSubview(datePicker)
+        self.view.addSubview(fieldLabel)
+        self.view.addSubview(dateLabel)
     }
     
     @objc func didTapSave() {

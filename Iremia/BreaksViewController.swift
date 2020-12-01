@@ -23,6 +23,13 @@ class BreaksViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var bodyField: UITextField!
     @IBOutlet var datePicker: UIDatePicker!
     
+    @IBOutlet var fieldLabel: UILabel!
+    @IBOutlet var dateLabel: UILabel!
+    //@IBOutlet var fieldLabel: UILabel!
+    //@IBOutlet var dateLabel: UILabel!
+    //fieldLabel
+    //dateLabel
+    
     //Completion function when page is done
     public var completion: ((String, Date) -> Void)?
     
@@ -56,8 +63,14 @@ class BreaksViewController: UIViewController, UITextFieldDelegate {
         gradientLayer.shouldRasterize = true
         backgroundGradientView.layer.addSublayer(gradientLayer)
         
+        //bodyField.textFieldInset = UIEdgeInsets(top: 50, left: 50, bottom: 50, right: 50)
+        
+        bodyField.layer.cornerRadius = 20
+
         self.view.addSubview(bodyField)
         self.view.addSubview(datePicker)
+        self.view.addSubview(fieldLabel)
+        self.view.addSubview(dateLabel)
     }
     
     @objc func didTapSave() {
