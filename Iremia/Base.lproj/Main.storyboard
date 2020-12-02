@@ -481,7 +481,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="eKN-tw-h8F"/>
                                 </constraints>
-                                <color key="textColor" red="0.13977056169999999" green="0.096466295729999998" blue="0.43053756479999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -551,7 +551,7 @@
                                     <constraint firstAttribute="height" constant="80" id="fJY-FR-eB4"/>
                                     <constraint firstAttribute="width" constant="344" id="lvT-7x-dpV"/>
                                 </constraints>
-                                <color key="textColor" red="0.13977056169999999" green="0.096466295729999998" blue="0.43053756479999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -621,7 +621,7 @@
                                     <constraint firstAttribute="height" constant="80" id="50B-R4-POl"/>
                                     <constraint firstAttribute="width" constant="344" id="QJb-dI-z8Y"/>
                                 </constraints>
-                                <color key="textColor" red="0.13977056169999999" green="0.096466295729999998" blue="0.43053756479999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -690,7 +690,7 @@
                                     <constraint firstAttribute="height" constant="80" id="3hH-GA-qJy"/>
                                     <constraint firstAttribute="width" constant="344" id="jyi-Zv-Bm3"/>
                                 </constraints>
-                                <color key="textColor" red="0.13977056169999999" green="0.096466295729999998" blue="0.43053756479999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
