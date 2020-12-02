@@ -64,29 +64,35 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bVR-9C-RBE">
-                                <rect key="frame" x="20" y="154" width="374" height="72"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7DA-ZG-E7C">
+                                <rect key="frame" x="35" y="246" width="370" height="21"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="72" id="nQy-tS-88m"/>
+                                    <constraint firstAttribute="width" constant="370" id="MO8-6S-8R0"/>
+                                    <constraint firstAttribute="height" constant="22" id="d7Y-J7-Jys"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7DA-ZG-E7C">
-                                <rect key="frame" x="20" y="246" width="374" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <navigationBar contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="K1S-N2-AKK">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                            </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lms-lQ-aBU">
+                                <rect key="frame" x="20" y="88" width="370" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="370" id="ElA-Sb-46K"/>
+                                    <constraint firstAttribute="height" constant="34" id="jf1-GJ-tRy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="33"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="0.29938476739999997" green="0.21549656070000001" blue="0.48745142489999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </label>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="K1S-N2-AKK">
-                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            </navigationBar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lms-lQ-aBU">
-                                <rect key="frame" x="20" y="88" width="374" height="70"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bVR-9C-RBE">
+                                <rect key="frame" x="35" y="129" width="370" height="44"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="70" id="jf1-GJ-tRy"/>
+                                    <constraint firstAttribute="width" constant="370" id="8Hr-lU-HBf"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="22" id="ngM-N1-grX"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -96,15 +102,12 @@
                         <viewLayoutGuide key="safeArea" id="bFj-PA-ioy"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="bFj-PA-ioy" firstAttribute="trailing" secondItem="Lms-lQ-aBU" secondAttribute="trailing" constant="20" id="3J4-vW-zKa"/>
-                            <constraint firstItem="Lms-lQ-aBU" firstAttribute="top" secondItem="bFj-PA-ioy" secondAttribute="top" constant="20" id="46U-HE-xl7"/>
-                            <constraint firstItem="bVR-9C-RBE" firstAttribute="top" secondItem="Lms-lQ-aBU" secondAttribute="bottom" constant="20" id="BJv-nC-iLK"/>
-                            <constraint firstItem="7DA-ZG-E7C" firstAttribute="top" secondItem="bVR-9C-RBE" secondAttribute="bottom" constant="20" id="G6v-ge-DPY"/>
-                            <constraint firstItem="bVR-9C-RBE" firstAttribute="leading" secondItem="bFj-PA-ioy" secondAttribute="leading" constant="20" id="JCB-Qv-3oq"/>
-                            <constraint firstItem="bFj-PA-ioy" firstAttribute="trailing" secondItem="7DA-ZG-E7C" secondAttribute="trailing" constant="20" id="SHP-Gn-vqv"/>
-                            <constraint firstItem="bFj-PA-ioy" firstAttribute="trailing" secondItem="bVR-9C-RBE" secondAttribute="trailing" constant="20" id="Z6r-XD-wr2"/>
-                            <constraint firstItem="7DA-ZG-E7C" firstAttribute="leading" secondItem="bFj-PA-ioy" secondAttribute="leading" constant="20" id="kN3-FD-o1Y"/>
-                            <constraint firstItem="Lms-lQ-aBU" firstAttribute="leading" secondItem="bFj-PA-ioy" secondAttribute="leading" constant="20" id="ldG-24-2iB"/>
+                            <constraint firstItem="bVR-9C-RBE" firstAttribute="top" secondItem="Lms-lQ-aBU" secondAttribute="bottom" constant="25" id="MC9-B5-jx7"/>
+                            <constraint firstItem="Lms-lQ-aBU" firstAttribute="leading" secondItem="bFj-PA-ioy" secondAttribute="leading" constant="20" id="N59-b8-TFq"/>
+                            <constraint firstItem="7DA-ZG-E7C" firstAttribute="leading" secondItem="bFj-PA-ioy" secondAttribute="leading" constant="35" id="PDI-ao-e9h"/>
+                            <constraint firstItem="Lms-lQ-aBU" firstAttribute="top" secondItem="K1S-N2-AKK" secondAttribute="bottom" constant="80" id="cbe-xF-kcL"/>
+                            <constraint firstItem="bVR-9C-RBE" firstAttribute="leading" secondItem="bFj-PA-ioy" secondAttribute="leading" constant="35" id="dbm-NW-aZH"/>
+                            <constraint firstItem="7DA-ZG-E7C" firstAttribute="top" secondItem="bVR-9C-RBE" secondAttribute="bottom" constant="35" id="pGz-r3-h3t"/>
                         </constraints>
                     </view>
                     <connections>
@@ -380,6 +383,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.33870365330000002" green="0.3281565803" blue="0.65283946699999995" alpha="0.23000000000000001" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="tintColor" red="0.9103659758" green="0.91685700879999998" blue="0.93633010790000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -487,6 +491,7 @@
                             </textField>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="C6u-AT-r3u">
                                 <rect key="frame" x="35" y="364" width="344" height="150"/>
+                                <color key="tintColor" red="0.9103659758" green="0.91685700879999998" blue="0.93633010790000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="XW4-fh-pKo"/>
                                     <constraint firstAttribute="width" constant="344" id="fow-lI-kwq"/>
@@ -558,6 +563,7 @@
                             <datePicker contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" layoutMarginsFollowReadableWidth="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="m5N-Yo-lye">
                                 <rect key="frame" x="35" y="364" width="344" height="150"/>
                                 <color key="backgroundColor" red="0.21808484341992795" green="0.16924115857395353" blue="0.36716726036269431" alpha="0.67000440140845074" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="0.9103659758" green="0.91685700879999998" blue="0.93633010790000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="cgq-4x-tU7"/>
                                     <constraint firstAttribute="width" constant="344" id="clQ-FG-Exe"/>
@@ -627,6 +633,7 @@
                             </textField>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="scg-2k-jJu">
                                 <rect key="frame" x="35" y="364" width="344" height="150"/>
+                                <color key="tintColor" red="0.9103659758" green="0.91685700879999998" blue="0.93633010790000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="344" id="1uj-LE-czr"/>
                                     <constraint firstAttribute="height" constant="150" id="5YH-NA-iPN"/>
@@ -696,6 +703,7 @@
                             </textField>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="jzs-96-Wro">
                                 <rect key="frame" x="35" y="364" width="344" height="150"/>
+                                <color key="tintColor" red="0.9103659758" green="0.91685700879999998" blue="0.93633010790000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="344" id="4Dv-Tk-DQp"/>
                                     <constraint firstAttribute="height" constant="150" id="9LI-yh-I0H"/>
