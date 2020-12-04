@@ -35,6 +35,7 @@ class ExerciseViewController: UIViewController, UITextFieldDelegate {
     var exerciseReminders = [ExerciseReminder]()
     
     override func viewDidLoad() {
+        //base page with default inputs/directions
         super.viewDidLoad()
         bodyField.delegate = self
         bodyField.attributedPlaceholder = NSAttributedString(string: "Enter exercise reminder description", attributes: [NSAttributedString.Key.foregroundColor: #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)])
@@ -60,7 +61,8 @@ class ExerciseViewController: UIViewController, UITextFieldDelegate {
         backgroundGradientView.layer.addSublayer(gradientLayer)
         
        
-        
+
+        //adds the elements onto page
         self.view.addSubview(bodyField)
         self.view.addSubview(datePicker)
         self.view.addSubview(fieldLabel)
