@@ -39,6 +39,7 @@ class BreaksViewController: UIViewController, UITextFieldDelegate {
     var breaksReminders = [BreaksReminder]()
     
     override func viewDidLoad() {
+        //base page with default inputs/directions
         super.viewDidLoad()
         bodyField.delegate = self
         bodyField.attributedPlaceholder = NSAttributedString(string: "Enter break reminder description", attributes: [NSAttributedString.Key.foregroundColor: #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)])
@@ -63,10 +64,11 @@ class BreaksViewController: UIViewController, UITextFieldDelegate {
         gradientLayer.shouldRasterize = true
         backgroundGradientView.layer.addSublayer(gradientLayer)
         
-        //bodyField.textFieldInset = UIEdgeInsets(top: 50, left: 50, bottom: 50, right: 50)
-        
+       
+        //Rounds input box edges
         bodyField.layer.cornerRadius = 20
 
+        //adds the elements onto page
         self.view.addSubview(bodyField)
         self.view.addSubview(datePicker)
         self.view.addSubview(fieldLabel)
