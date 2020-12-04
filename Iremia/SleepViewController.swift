@@ -36,6 +36,7 @@ class SleepViewController: UIViewController, UITextFieldDelegate {
     var sleepReminders = [SleepReminder]()
     
     override func viewDidLoad() {
+        //base page with default inputs/directions
         super.viewDidLoad()
         bodyField.delegate = self
         bodyField.attributedPlaceholder = NSAttributedString(string: "Enter sleep reminder description", attributes: [NSAttributedString.Key.foregroundColor: #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)])
@@ -59,7 +60,9 @@ class SleepViewController: UIViewController, UITextFieldDelegate {
         gradientLayer.colors = [#colorLiteral(red: 0.3338187337, green: 0.3300850391, blue: 0.5314263105, alpha: 1).cgColor, #colorLiteral(red: 0.6792625189, green: 0.8248208165, blue: 0.7395270467, alpha: 1).cgColor]
         gradientLayer.shouldRasterize = true
         backgroundGradientView.layer.addSublayer(gradientLayer)
-        
+       
+
+        //adds the elements onto page
         self.view.addSubview(bodyField)
         self.view.addSubview(datePicker)
         self.view.addSubview(fieldLabel)
