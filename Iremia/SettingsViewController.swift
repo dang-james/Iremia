@@ -46,13 +46,14 @@ class SettingsViewController: UIViewController {
 }
 
 extension SettingsViewController: UITableViewDelegate {
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("you tapped me!")
     }
     
 }
 
 extension SettingsViewController: UITableViewDataSource {
+    //set up table view for settings
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
     }
