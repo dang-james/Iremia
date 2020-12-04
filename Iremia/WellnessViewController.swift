@@ -18,6 +18,7 @@ class WellnessViewController: UIViewController {
     
     @IBOutlet weak var subDescription:UIView!
     
+    //ViewDidLoad function contains code for frontend
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -60,7 +61,7 @@ class WellnessViewController: UIViewController {
                 
                 let targetDate = date
                 let trigger = UNCalendarNotificationTrigger(dateMatching: Calendar.current.dateComponents([.year, .month, .day, .hour, .minute, .second], from: targetDate), repeats: true)
-                
+               
                 let notif_id = "exercise_id"
                 //delete old notification repeater
                 UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: [notif_id])
@@ -68,6 +69,7 @@ class WellnessViewController: UIViewController {
                 //create new notifcation repeater
                 let request = UNNotificationRequest(identifier: notif_id, content: content, trigger: trigger)
                 
+                //updates and adds actual notification
                 UNUserNotificationCenter.current().add(request, withCompletionHandler: { error in
                     if error != nil {
                         print("something went wrong")
@@ -107,6 +109,7 @@ class WellnessViewController: UIViewController {
                 //create new notifcation repeater
                 let request = UNNotificationRequest(identifier: notif_id, content: content, trigger: trigger)
                 
+                //updates and adds actual notification
                 UNUserNotificationCenter.current().add(request, withCompletionHandler: { error in
                     if error != nil {
                         print("something went wrong")
@@ -146,6 +149,7 @@ class WellnessViewController: UIViewController {
                 //create new notifcation repeater
                 let request = UNNotificationRequest(identifier: notif_id, content: content, trigger: trigger)
                 
+                //updates and adds actual notification
                 UNUserNotificationCenter.current().add(request, withCompletionHandler: { error in
                     if error != nil {
                         print("something went wrong")
@@ -185,6 +189,7 @@ class WellnessViewController: UIViewController {
                 //create new notifcation repeater
                 let request = UNNotificationRequest(identifier: notif_id, content: content, trigger: trigger)
                 
+                //updates and adds actual notification
                 UNUserNotificationCenter.current().add(request, withCompletionHandler: { error in
                     if error != nil {
                         print("something went wrong")
